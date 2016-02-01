@@ -1,0 +1,417 @@
+*{
+    padding : 0;
+    margin: 0;
+}
+
+header, footer, main, nav, aside, section, article{
+    display : block;
+}
+
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    //font-size: 14px;
+    /* line-height: 1.42857143; */
+    //color: #333;
+    /* background-color: #fff; */
+}
+a{
+    text-decoration: none ;
+}
+
+#wrapper2{
+    position: relative;
+    margin: auto;
+    height : 420px;
+    width : 80vw;
+    //border : 12px solid #adadad;
+    border-radius: 15px;
+}
+
+.lightBox{
+    height : 100%;
+    background: #ffffff;
+    //border : 1px solid #000000;
+}
+
+
+.featherlight {
+		display: none;
+		/* dimensions: spanning the background from edge to edge */
+		position:fixed;
+		top: 0; right: 0; bottom: 0; left: 0;
+		/* position: centering content */
+		text-align: center;
+		/* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+		white-space: nowrap;
+		/* styling */
+		cursor: pointer;
+		//background: #2c2c2c;
+		/* IE8 "hack" for nested featherlights */
+		background: #000000;
+}
+
+	/* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+.featherlight:last-of-type {
+		background: #000000;
+}
+
+.featherlight:before {
+		/* position: trick to center content vertically */
+		content: '';
+		display: inline-block;
+		height: 100%;
+
+		vertical-align: middle;
+		margin-right: -0.25em;
+        background: rgba(0, 0, 0, 0.80);
+}
+
+.featherlight .featherlight-content {
+		/* make content container for positioned elements (close button) */
+		position: relative;
+
+		/* position: centering vertical and horizontal */
+		text-align: left;
+		vertical-align: middle;
+		display: inline-block;
+
+		/* dimensions: cut off images */
+		overflow: auto;
+
+		/* styling */
+        background: #be5d5d;
+		cursor: auto;
+
+		/* reset white-space wrapping */
+		//white-space: normal;
+	}
+
+/* contains the content */
+.featherlight .featherlight-inner {
+		/* make sure its visible */
+		display: block;
+}
+
+.featherlight .featherlight-close-icon {
+		/* position: centering vertical and horizontal */
+		position: absolute;
+		top: 0;
+		right: 0;
+        display : none;
+		/* dimensions: 25px x 25px */
+		line-height: 25px;
+		width: 25px;
+
+		/* styling */
+		cursor: pointer;
+		text-align: center;
+		font-family: Arial, sans-serif;
+		background: rgba(255, 255, 255, 0.3);
+		color: #000;
+}
+
+
+.content{
+    padding : 3vh;
+    //padding-bottom: 30px;
+    height:400px;
+    font-family: arial;
+    margin: auto;
+    width : 90%;
+}
+
+.chooseArea{
+    float : left;
+    height : 80%;
+    width : 70%;
+}
+.chooseArea h2,h3{
+    display : inline;
+}
+
+.imgArea{
+    float : right;
+
+}
+
+.imgArea img{
+    float : left ;
+    margin : -10px;
+}
+
+#customeImage{
+    width : 250px;
+    height : 265px;
+    border : 1px solid #999999;
+    background: url(../images/rob1big.gif) center;
+    border-radius: 5px;
+    float : left ;
+    //margin : -10px;
+}
+
+.chooseArea input{
+    margin : 1.5vh;
+}
+
+.chooseArea label{
+    display: inline;
+    margin-left : 1vw;
+}
+
+.clear{
+    clear: both;
+}
+
+/*slides css*/
+.list-group-item{
+    margin-bottom: 3px;
+}
+
+.carousel-control{
+    height : 100%;
+    width : 5%;
+    background : rgb(255, 255, 255);
+    color : #821122;
+    border-radius: 15px;
+
+}
+
+.carousel-control.left{
+    background : rgb(255, 255, 255);
+}
+
+.carousel-control.right{
+    background : rgb(255, 255, 255);
+}
+
+
+.btn-primary{
+    width : 30vw;
+    float : left;
+    display:block;
+    margin-bottom: 3px;
+    border-radius : 0px;
+}
+
+#lastPanel{
+    height : 50px;
+}
+.purchaseButtons{
+    display : inline;
+    float : right;
+    margin-top: -9px;
+    margin-right: -10px;
+}
+
+.progBar ol{
+    width : 80%;
+    position: absolute;
+    //margin: auto;
+    bottom:0px;
+    left : 40%
+}
+
+.carousel-indicators-numbers li{
+    background: url(../images/bracket2.gif);
+    height : 30px;
+    text-indent:-2%;
+    padding : 0px;
+    //margin: 0 auto;
+    width: 80px;
+    border: none;
+    //margin-right: 0.01vw;
+    //border-radius: 2px 0px 0px 2px;
+    line-height: 30px;
+    color: #fff;
+    //background-color: #999;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/*
+.carousel-indicators-numbers li:before {
+   content:"";
+   position: absolute;
+   left: 100%;
+   top: 0px;
+   width: 0;
+   height: 0;
+   border-top: 15px solid transparent;
+   border-left: 24px solid #999;
+   border-bottom: 15.5px solid transparent;
+}
+*/
+
+.carousel-indicators-numbers li:hover{
+    background: url(../images/bracket2.gif) no-repeat right;
+    //margin: 0 0.7vw;
+    width: 80px;
+    height: 30px;
+    //background-color: #821122;
+    //border-left: 24px solid #337ab7;
+}
+
+#rightBracket{
+     background: url(../images/bracket2.gif) no-repeat right;
+}
+
+
+
+.carousel-indicators-numbers li.active{
+    background: url(../images/bracket2.gif) no-repeat right;
+    //margin: 0 0.7vw;
+    width: 80px;
+    height: 30px;
+    //background-color: #821122;
+    //border-left: 24px solid #337ab7;
+    font-weight: 900;
+}
+
+#toSavePanel{
+    position: absolute;
+    top : 30px;
+    left : 25%;
+    width : 50%;
+    height : 47vh;
+    margin: auto;
+    z-index: 999;
+    display: none;
+    box-shadow: 7px 7px 30px #000000;
+}
+
+.alert-success{
+    display: none;
+    margin-top: 5px;
+}
+
+.checkbox-inline input{
+
+}
+
+@media screen and (max-width : 1269px){
+    body{
+        height : 700px;
+    }
+
+    #wrapper2{
+        width : 100%;
+        border : 0px;
+        height : 100%;
+
+    }
+    .lightBox{
+        height : 100%;
+        //background: #ffffff;
+        border : 0px;
+    }
+    #myCarousel{
+        height : 100%;
+    }
+
+    .carousel-inner{
+        height : 100%;
+    }
+
+    .item{
+        border-radius: 15px;
+    }
+
+    .content{
+        padding : 2vh;
+        //padding-bottom: 30px;
+        height : 100%;
+        font-family: arial;
+        margin: auto;
+        width : 90%;
+    }
+    .progBar ol{
+        display: none;
+    }
+
+    .imgArea{
+        position: absolute;
+        left : 10%;
+        margin: auto;
+    }
+
+    #customeImage{
+        position: relative;
+        background: url(../images/rob1medium.gif) center no-repeat;
+        width : 80vw;
+        height : 25vh;
+    border : 1px solid #999999;
+    }
+
+    .chooseArea{
+        position : relative;
+        top : 34vh;
+        width : 100%;
+    }
+
+    .btn-primary{
+        width : 100%;
+    }
+
+    #toSavePanel{
+        position: absolute;
+        top : 30px;
+        left : 10%;
+        width : 80%;
+    }
+
+.featherlight {
+        height : 100%;
+        width : 100%;
+		//display: none;
+		/* dimensions: spanning the background from edge to edge */
+		position:fixed;
+        border : 0px;
+		top: 0; right: 0; bottom: 0; left: 0;
+		/* position: centering content */
+		//text-align: center;
+		/* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+		//white-space: nowrap;
+		/* styling */
+		//cursor: pointer;
+		//background: #2c2c2c;
+		/* IE8 "hack" for nested featherlights */
+		//background: #000000;
+    }
+
+.featherlight:last-of-type {
+        border : 0px;
+        width : 100%;
+        height : 100%;
+		background: #f7f7f7;
+    }
+
+.featherlight:before {
+        border : 0px;
+		/* position: trick to center content vertically */
+		//content: '';
+		//display: inline-block;
+
+		//vertical-align: middle;
+    }
+
+    .featherlight .featherlight-content {
+		/* make content container for positioned elements (close button) */
+		position: relative;
+        width : 100%;
+        height : 100%;
+		/* position: centering vertical and horizontal */
+		text-align: left;
+		vertical-align: middle;
+		display: inline-block;
+        border : 0px;
+
+		/* dimensions: cut off images */
+		overflow: auto;
+
+		/* styling */
+		//cursor: auto;
+
+		/* reset white-space wrapping */
+		//white-space: normal;
+	}
+}

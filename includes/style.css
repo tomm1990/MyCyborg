@@ -1,0 +1,558 @@
+*{
+    padding : 0;
+    margin: 0;
+}
+
+header, footer, main, nav, aside, section, article{
+    display : block;
+}
+
+a{
+    text-decoration: none ;
+    color:black;
+}
+
+body{
+    height : 100%;
+    background : #E9E8EA;
+}
+
+#wrapper{
+    width : 100%;
+    height : 100%;
+    margin : 0px auto;
+}
+
+header{
+    height : 65px;
+    font-family: tahoma;
+    background : #ffffff;
+}
+
+#logo{
+	float:left;
+	width: 140px;
+	height: 60px;
+	background: url('../images/logo.png') no-repeat;
+	margin-top: 3px;
+	margin-left: 3px;
+
+}
+
+
+.firstMenuBar{
+    font-size:1.3vw;
+     padding-top: 43px;
+
+}
+
+.firstMenuBar a{
+    color : #18001E;
+    padding-right : 15px;
+    padding-left: 15px;
+    font-family:"Patrick Hand" , tahoma , arial;
+    padding-bottom:10px;
+    padding-top:10px;
+
+}
+
+.firstMenuBar a:hover{
+    background: #ebebe0;
+    transition: 0.4s ease-in;
+}
+
+
+#personDetails{
+	 background: #ffffff;
+	 width:200px;
+	 height:70px;
+	 font-size:11px;
+	 display: block;
+	 float:right;
+	 padding-top:3px;
+	 padding-right:10px;
+ margin-top:-50px;
+
+}
+
+#personDetails p{
+   margin-top:10px;
+	width:110px;
+	height:30px;
+	float:right;
+	padding-top:10px;
+	padding-right:10px;
+}
+
+#personDetails img{
+    margin-top:10px;
+	width:25px;
+	height:25px;
+	float:right;
+}
+
+input[type=text]{
+	border-radius:8px;
+	border: 1px solid black;
+	height:18px;
+}
+
+form{
+	float:right;
+    margin-top: -3px;
+	margin-right:8px;
+}
+
+.menuBar{
+    height : 30px;
+    padding-top:4px;
+    padding-bottom: 4px;
+    font-size:1vw;
+    font-family: "Patrick hand" , tahoma , arial;
+}
+
+nav{
+    height : 25px;
+    width : 100%;
+    background: #ebebe0;
+}
+
+.menuBar a{
+    padding-right:30px;
+}
+
+.menuBar:first-child{
+	margin-left:15%;
+}
+
+
+
+
+nav a:hover{
+    transition: 0.25s ease-in;
+    border-bottom: 4px solid #7f87a2;
+    color : #7f87a2;
+}
+
+
+main {
+    margin: auto;
+    width : 80%;
+    height : 100%;
+    background: #ffffff;
+    overflow:hidden;
+    /*box-shadow: 7px 7px 7px #606060;*/
+/*
+    border-radius : 5px;
+    border-radius : 10px linear-gradient(#ebebe0, #e0e0d1);
+*/
+}
+
+
+
+figure{
+    background: #f7f6f6;
+    margin-top : 30px;
+    margin-left : 9vw;
+    margin-bottom: 13px;
+    float:left;
+
+    padding 10px;
+    border : 1px solid #000000;
+    border-radius : 5px;
+    box-shadow: 7px 7px 7px #606060;
+}
+
+figure:hover{
+    transition: 0.2s ease-in;
+    border : 1px solid #c7c7c7;
+    border-radius : 5px;
+    box-shadow: 7px 7px 7px #c7c7c7;
+}
+
+figure h4{
+    font-family:  sans-serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+figure label{
+    float:right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+figcaption{
+    font-size: 1.8vw;
+    position: relative;
+    margin-top: -3px;
+    margin-left: -13px;
+    padding: 10px;
+    background: #f7f6f6;
+    border : 3px solid #000000;
+    width : 100%;
+    font-family: Patrick hand;
+    text-align: center;
+    font-family: arial;
+    box-shadow: 7px 0px 7px #606060;
+}
+
+figure img{
+    width: 12vw;
+    height : 16vw;
+    display: inline-block;
+    padding : 10px;
+}
+
+.addButton{
+    position: absolute;
+    right :11vw;
+    top : 50px ;
+    z-index: 8888;
+    //margin-right: 0.9vw;
+    font-size : 100px;
+    float : right;
+    color : #ebebe0;
+    text-shadow: 4px 4px 7px #5a5a5a;
+}
+
+.addButton:hover{
+   text-shadow: 0px 0px 0px #5a5a5a;
+}
+
+#clear{
+    clear : both;
+}
+
+#this{
+background-color: #ebebe0;
+
+}
+.dropdown{
+    display : none;
+}
+
+
+#facebook{
+    background: url('../images/facebook.png') no-repeat; width:37px;
+    height:30px;
+    float:right;
+    margin-right:20px;
+}
+
+#google{
+    background: url('../images/google.png') no-repeat; width:37px;
+    height:30px;
+    float:right;
+    margin-right:20px;
+}
+
+#link{
+    background: url('../images/linkedin.png') no-repeat; width:37px;
+    height:30px;
+    float:right;
+    margin-right:20px;
+}
+
+#contactus{
+    background: url('../images/contactus.png') no-repeat; width:37px;
+    height:30px;
+    float:right;
+    margin-right:20px;
+}
+
+footer{
+    width : 100%;
+    position: fixed;
+    bottom:0;
+    ￼height : 20px;
+    background: #b4b4b4;
+    font-family: tahoma , arial ;
+    color:#000000;
+}
+
+footer p{
+    display:inline-block;
+    position:relative;
+    left:20px;
+}
+
+#save{
+    width : 100%;
+    height : 400px;
+    padding-top: 50px;
+}
+
+#forDropDown{
+    float : left;
+    height : 200px;
+    width : 30%;
+}
+
+#forDropDown .dropdown{
+    display : block;
+    top : 30px;
+    left : 30px;
+    z-index: 9999;
+}
+
+#data{
+    width : 70%;
+	float:left;
+	position:relative;
+    text-align: left;
+}
+
+#data p{
+    float:left;
+	margin-top:30px;
+	margin-left:20px;
+	padding:70px;
+	border : 1px solid #c7c7c7;
+}
+
+#data img{
+    margin : 15px;
+	float : right;
+}
+
+#family{
+	 color: gray;
+	 font-family : "Bookman Old Style" , "calibri" , ;
+	 font-size:40px;
+	 text-align:center;
+	 padding-top:10px;
+}
+
+#secwrap h2{
+    color: #990000;
+    font-family: "Patrick hand";
+}
+
+
+
+#secwrap{
+	width: 270px;
+    height: 316px;
+    display:inline-block;
+    font-family:"Bookman Old Style";
+
+    margin-top : 30px;
+    margin-left : 4vw;
+    margin-bottom: 13px;
+    float:left;
+    margin-right: 30px;
+
+
+
+}
+
+#d1{
+	background-color:#d6d6c2;
+	color:#990000;
+	width: 270px;
+	height: 33px;
+	text-align: center;
+
+}
+
+
+#d2{
+	display:inline-block;
+	background-color:#d6d6c2;
+	height:33px;
+	width: 270px;
+	color:#990000;
+	text-align: center;
+	font-family: "Patrick hand";
+
+}
+
+#img1{
+	background: url('../images/robot10.png');
+	width:270px;
+	height: 250px;
+	border : 1px solid #c7c7c7;
+}
+
+#img2{
+	background: url('../images/robot2.png') no-repeat;
+	width:270px;
+	height: 250px;
+	border : 1px solid #c7c7c7;
+}
+
+#img3{
+	background: url('../images/robot12.png') no-repeat ;
+	width:270px;
+	height: 250px;
+	border : 1px solid #c7c7c7;
+	padding-bottom: 100px;
+}
+
+#img4{
+	background: url('../images/robot4.png') no-repeat ;
+	width:270px;
+	height: 250px;
+	border : 1px solid #c7c7c7;
+
+}
+
+#img5{
+
+	background: url('../images/robot7.png') no-repeat ;
+	width:270px;
+	height: 250px;
+	border : 1px solid #c7c7c7;
+	padding-right:100px;
+
+}
+
+#img6{
+	background: url('../images/robot14.png') no-repeat ;
+	width:270px;
+	height: 250px;
+	border : 1px solid #c7c7c7;
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width:890px)
+{
+	header{
+	    height : 65px;
+	    font-family: tahoma;
+	}
+
+	#logo{
+		float:left;
+		width: 140px;
+		height: 60px;
+		background: url('../images/logo2.gif') no-repeat;
+	}
+
+    #wrapper{
+        width : 100%;
+    }
+	.firstMenuBar{
+        display: none;
+        border : 1px solid red;
+        margin-top: 30px;
+	}
+
+	.firstMenuBar a{
+        font-size:1.9vw;
+        padding-top: 3px;
+        color : #18001E;
+        padding-right : 2px;
+	}
+
+
+	.firstMenuBar a:hover{
+	    background: #d4e3fc;
+	    transition: 0.4s ease-in;
+	}
+
+    main{
+        width : 100%;
+    }
+
+	#personDetails{
+		 background: #CEC5D0;
+		 width:100px;
+		 height:70px;
+		 font-size:11px;
+		 display: block;
+		 float:right;
+		 margin-top:-50px;
+		 display:none;
+
+	}
+
+	#personDetails p{
+		width:90px;
+		height:30px;
+		float:right;
+		padding-top:-10px;
+		 display:none;
+	}
+
+	#personDetails img{
+		width:15px;
+		height:15px;
+		display:block;
+		float:right;
+		 display:none;
+	}
+
+	input[type=text]{
+		border-radius:8px;
+		border: 1px solid black;
+		height:18px;
+		width:100px;
+		 display:none;
+	}
+
+	form{
+		float:right;
+		margin-right:8px;
+		margin-top:6px;
+
+	}
+	.menuBar{
+	    display : none;
+        visibility: hidden;
+	}
+
+    .dropdown{
+        display : block;
+    }
+
+    .btn-primary{
+        margin-right: 1px;
+        font-size: 2vw;
+    }
+	nav{
+        height : 0px;
+        line-height: 60px;
+    }
+
+    .dropdown-menu{
+        left : 130px;
+        position: absolute;
+        padding : 1px;
+        width : 1vw;
+        font-size: 2vw;
+        margin-top: -12px;
+    }
+
+    .dropdown-menu li{
+        z-index: 999;
+    }
+
+	.menuBar a{
+	    font-size:2vw;
+        display : block;
+	}
+
+    .addButton{
+        top : 0px;
+    }
+
+
+/*
+	nav a:hover{
+	    transition: 0.25s ease-in;
+	    border-bottom: 4px solid #7f87a2;
+	    color : #7f87a2;
+	}
+*/
+
+}
+
