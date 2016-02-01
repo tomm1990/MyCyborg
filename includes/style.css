@@ -26,7 +26,7 @@ body{
 header{
     height : 65px;
     font-family: tahoma;
-    background : #ffffff;
+    background : #f7f6f6;
 }
 
 #logo{
@@ -63,7 +63,6 @@ header{
 
 
 #personDetails{
-	 background: #ffffff;
 	 width:200px;
 	 height:70px;
 	 font-size:11px;
@@ -72,6 +71,8 @@ header{
 	 padding-top:3px;
 	 padding-right:10px;
  margin-top:-50px;
+     background: #f7f6f6;
+
 
 }
 
@@ -137,10 +138,18 @@ nav a:hover{
 
 main {
     margin: auto;
-    width : 80%;
-    height : 100%;
+/*    height : 100%;*/
     background: #ffffff;
     overflow:hidden;
+
+    max-width : 85%;
+    height:1200px;
+    position : relative;
+    /*box-shadow: 7px 7px 7px #606060;*/
+/*
+    border-radius : 5px;
+    border-radius : 10px linear-gradient(#ebebe0, #e0e0d1);
+*/
     /*box-shadow: 7px 7px 7px #606060;*/
 /*
     border-radius : 5px;
@@ -220,13 +229,13 @@ figure img{
    text-shadow: 0px 0px 0px #5a5a5a;
 }
 
+
 #clear{
     clear : both;
 }
 
 #this{
-background-color: #ebebe0;
-
+    background-color: #821122;
 }
 .dropdown{
     display : none;
@@ -332,45 +341,50 @@ footer p{
 
 
 #secwrap{
-	width: 270px;
-    height: 316px;
-    display:inline-block;
-    font-family:"Bookman Old Style";
-
-    margin-top : 30px;
-    margin-left : 4vw;
-    margin-bottom: 13px;
-    float:left;
-    margin-right: 30px;
-
-
+    position : relative;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	margin-top:60px;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+	float:left;
+	margin-right: 5%;
+	margin-left:8%;
 
 }
 
 #d1{
-	background-color:#d6d6c2;
+    margin-top: 186px;
 	color:#990000;
-	width: 270px;
-	height: 33px;
 	text-align: center;
+}
 
+#d1 h2{
+    font-size : 22px;
 }
 
 
 #d2{
 	display:inline-block;
-	background-color:#d6d6c2;
 	height:33px;
 	width: 270px;
 	color:#990000;
 	text-align: center;
 	font-family: "Patrick hand";
+}
 
+#d3{
+	color:#990000;
+	text-align: center;
+	font-family: "Patrick hand";
+    font-size : 1.6vw;
 }
 
 #img1{
-	background: url('../images/robot10.png');
-	width:270px;
+	//background: url('../images/robot10.png');
+    width:270px;
 	height: 250px;
 	border : 1px solid #c7c7c7;
 }
@@ -413,13 +427,90 @@ footer p{
 	width:270px;
 	height: 250px;
 	border : 1px solid #c7c7c7;
+}
+
+.circle_sec{
+    position : relative;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	margin-top:60px;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+	float:left;
+	margin-right: 5%;
+	margin-left:8%;
+    padding: 2px;
+}
+
+.circle_sec p{
+    position: absolute;
+    bottom: -20%;
+    text-align: center;
+    left : 33%;
+    color : #821122;
+}
 
 
+main h1{
+	color:#821122;
+	text-align:center;
+	margin-top : 55px;
+	position:relative;
+	font-family: "Patrick hand";
+    font-size : 200%;
 
 }
 
 
+#left_list{
+    position : relative;
+	width:15%;
+	height:640px;
+	float:left;
+	border-right: 2px solid #ffffff;
+	background: #f7f6f6;
+	padding-left:0.5vw;
+    padding-right:0.5vw;
+}
 
+
+#left_list p{
+	margin-top:-50px;
+	color:#821122
+}
+
+#loade{
+
+	height:640px;
+	background: #f7f6f6;
+}
+
+#plus{
+	background: url('../images/plus.png') no-repeat;
+	float:right;
+	width:35px;
+	height:32px;
+	margin-right:40px;
+	margin-top:-45px;
+
+}
+
+
+#like{
+	background: url('../images/likes.png') no-repeat;
+	width:125px;
+	height:50px;
+	margin-top:20px;
+    margin : auto;
+}
+
+.leftSide_list{
+    height: 180px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
 
 
 

@@ -2,6 +2,7 @@
 <html>
     <head>
         <script src="//code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Patrick+Hand">
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -37,21 +38,26 @@
                     <h3 class="panel-title">Choose The Material</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Lego</button>
-                        <button type="button" class="list-group-item">Wood</button>
-                        <button type="button" class="list-group-item">Steel</button>
+                    <div class="list-group" data-toggle="buttons">
+<!--                        <button id="i" type="button" class="list-group-item">Lego</button>-->
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="material[]" autocomplete="off" checked> Lego
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Wood</button>-->
+                          <label class="btn btn-primary">
+                              <input type="radio" name="material[]" autocomplete="off"> Wood
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Steel</button>-->
+                        <label class="btn btn-primary">
+                              <input type="radio" name="material[]" autocomplete="off"> Steel
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="imgArea">
-            <div class="panel panel-default">
-                <div class="panel-heading">#Name</div>
-                <div class="panel-body" id="customeImage"></div>
-            </div>
-        </div>
-        <div class="clear"></div>
     </div>
 </div>
 
@@ -65,21 +71,26 @@
                     <h3 class="panel-title">Choose A Face Shape</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Rectangle</button>
-                        <button type="button" class="list-group-item">Circle</button>
-                        <button type="button" class="list-group-item">Triangle</button>
+                    <div class="list-group" data-toggle="buttons">
+<!--                        <button id="i" type="button" class="list-group-item">Lego</button>-->
+                        <label  class="btn btn-primary active">
+                            <input type="radio" name="faceShape[]" autocomplete="off" checked> Rectangle
+                            <div id="rectangle"></div>
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Wood</button>-->
+                        <label  class="btn btn-primary">
+                            <input type="radio" name="faceShape[]" autocomplete="off"> Circle
+                            <div id="circle"></div>
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Steel</button>-->
+                        <label  class="btn btn-primary">
+                            <input type="radio" name="faceShape[]" autocomplete="off"> Triangle
+                            <div id="triangle"></div>
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="imgArea">
-            <div class="panel panel-default">
-                <div class="panel-heading">#Name</div>
-                <div class="panel-body" id="customeImage"></div>
-            </div>
-        </div>
-        <div class="clear"></div>
     </div>
 </div>
 
@@ -93,24 +104,29 @@
                     <h3 class="panel-title">Choose Eyes</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="list-group">
-                        <button type="button" class="list-group-item">Standart , Human Eye</button>
-                        <button type="button" class="list-group-item">Farsighteness up to 100 meter</button>
-                        <button type="button" class="list-group-item">Farsighteness up to 200 meter</button>
+                    <div class="list-group" data-toggle="buttons">
+<!--                        <button id="i" type="button" class="list-group-item">Lego</button>-->
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="eyesType[]" autocomplete="off" checked> Standard, Human Eye
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Wood</button>-->
+                          <label class="btn btn-primary">
+                              <input type="radio" name="eyesType[]" autocomplete="off"> Frasighteness up to 100 meter
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Steel</button>-->
+                        <label class="btn btn-primary">
+                              <input type="radio" name="eyesType[]" autocomplete="off"> Frasighteness up to 200 meter
+                        </label>
+                    </div><br>
+                </div>
+           </div>
+
+                <div id="nightVision" class="btn-group" data-toggle="buttons">
+                    <div class="panel-body">
+                        <label class="checkbox-inline"><input type="checkbox" value="">Night Vision</label>
                     </div>
                 </div>
-            </div>
-            <div class="btn-group" data-toggle="buttons">
-                 <div class="panel-body">
-                    <label class="checkbox-inline"><input type="checkbox" value="">Night Vision</label>
-                 </div>
-            </div>
-        </div>
-        <div class="imgArea">
-           <div class="panel panel-default">
-               <div class="panel-heading">#Name</div>
-                <div class="panel-body" id="customeImage"></div>
-           </div>
+
         </div>
         <div class="clear"></div>
     </div>
@@ -133,12 +149,14 @@
                 </div>
             </div>
         </div>
+<!--
         <div class="imgArea">
             <div class="panel panel-default">
                 <div class="panel-heading">#Name</div>
                 <div class="panel-body" id="customeImage"></div>
             </div>
         </div>
+-->
         <div class="clear"></div>
     </div>
 </div>
@@ -166,12 +184,14 @@
                 </div>
             </div>
         </div>
+<!--
         <div class="imgArea">
             <div class="panel panel-default">
                 <div class="panel-heading">#Name</div>
                 <div class="panel-body" id="customeImage"></div>
             </div>
         </div>
+-->
         <div class="clear"></div>
     </div>
 </div>
@@ -196,20 +216,31 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <div class="list-group">
-                        <button type="radio" class="list-group-item">Standart Hearing Ability</button>
-                        <button type="radio" class="list-group-item">Hearing distance of 100 metter</button>
-                        <button type="radio" class="list-group-item">Hearing distance of 200 metter</button>
+                    <div class="list-group" data-toggle="buttons">
+<!--                        <button id="i" type="button" class="list-group-item">Lego</button>-->
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="earsType" autocomplete="off" checked> Standard Hearing Ability
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Wood</button>-->
+                          <label class="btn btn-primary">
+                              <input type="radio" name="earsType" autocomplete="off"> Hearing distance of 100 meter
+                        </label>
+<!--                        <button id="i" type="button" class="list-group-item">Steel</button>-->
+                        <label class="btn btn-primary">
+                              <input type="radio" name="earsType" autocomplete="off"> Hearing distance of 200 meter
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
+<!--
         <div class="imgArea">
             <div class="panel panel-default">
                 <div class="panel-heading">#Name</div>
                 <div class="panel-body" id="customeImage"></div>
             </div>
         </div>
+-->
         <div class="clear"></div>
     </div>
 </div>
@@ -224,21 +255,31 @@
                     <h3 class="panel-title">Choose Body Strength</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="list-group">
-                        <button type="radio" class="list-group-item">Lifting weight up to 8kg</button>
-                        <button type="radio" class="list-group-item">Lifting weight up to 20kg</button>
-                        <button type="radio" class="list-group-item">Lifting weight up to 40kg</button>
-                        <button type="radio" class="list-group-item">Lifting weight up to 60kg</button>
+                    <div class="list-group" data-toggle="buttons">
+                        <label class="btn btn-primary active">
+                            <input type="radio" name="liftStrength" autocomplete="off" checked> Lifting weight up to 8kg
+                        </label>
+                          <label class="btn btn-primary">
+                              <input type="radio" name="liftStrength" autocomplete="off"> Lifting weight up to 20kg
+                        </label>
+                        <label class="btn btn-primary">
+                              <input type="radio" name="liftStrength" autocomplete="off"> Lifting weight up to 40kg
+                        </label>
+                        <label class="btn btn-primary">
+                              <input type="radio" name="liftStrength" autocomplete="off"> Lifting weight up to 60kg
+                        </label>
                     </div>
                 </div>
             </div>
         </div>
+<!--
         <div class="imgArea">
             <div class="panel panel-default">
                 <div class="panel-heading">#Name</div>
                 <div class="panel-body" id="customeImage"></div>
             </div>
         </div>
+-->
         <div class="clear"></div>
     </div>
 </div>
@@ -251,7 +292,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Choose Hands Properties</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body"><br>
                     <div class="btn-group" data-toggle="buttons">
                         <label class="checkbox-inline"><input type="checkbox" value="">Flexible
                         </label><br>
@@ -267,12 +308,14 @@
                 </div>
             </div>
         </div>
+<!--
         <div class="imgArea">
             <div class="panel panel-default">
                 <div class="panel-heading">#Name</div>
                 <div class="panel-body" id="customeImage"></div>
             </div>
         </div>
+-->
         <div class="clear"></div>
     </div>
 </div>
@@ -287,7 +330,7 @@
                     <h3 class="panel-title">Choose Legs Properties</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="btn-group" data-toggle="buttons">
+                    <div class="btn-group" data-toggle="buttons"><br>
                         <label class="checkbox-inline"><input type="checkbox" value="">Flexible
                         </label><br>
          <label class="checkbox-inline"><input type="checkbox" value="">Monitoring Capability
@@ -302,7 +345,9 @@
                 </div>
             </div>
         </div>
-        <div class="imgArea">
+    </div>
+            <div class="checkoutArea">
+<!--
             <div class="panel panel-default">
                 <div class="panel-heading" id="lastPanel">#Name
                     <div class="purchaseButtons">
@@ -316,9 +361,11 @@
                 </div>
                 <div class="panel-body" id="customeImage"></div>
             </div>
+-->
+                <p>Add to chart</p>
+                <p>Add to wish list</p>
+                <input class="newButton" type="submit" value="BUY NOW!">
         </div>
-        <div class="clear"></div>
-    </div>
 </div>
 <!--End of items -->
 

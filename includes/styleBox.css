@@ -22,15 +22,16 @@ a{
     position: relative;
     margin: auto;
     height : 420px;
-    width : 80vw;
+    width : 60vw;
     //border : 12px solid #adadad;
-    border-radius: 15px;
+    //border-radius: 10px;
 }
 
 .lightBox{
     height : 100%;
     background: #ffffff;
     //border : 1px solid #000000;
+    //border-radius : 10px;
 }
 
 
@@ -79,11 +80,13 @@ a{
 		overflow: auto;
 
 		/* styling */
-        background: #be5d5d;
+        //background: #be5d5d;
 		cursor: auto;
 
 		/* reset white-space wrapping */
 		//white-space: normal;
+        padding : 0px;
+        border-bottom: 0px solid transparent;
 	}
 
 /* contains the content */
@@ -112,26 +115,30 @@ a{
 
 
 .content{
-    padding : 3vh;
+    padding : 5vh;
     //padding-bottom: 30px;
     height:400px;
     font-family: arial;
     margin: auto;
-    width : 90%;
+    width : 50%;
 }
 
 .chooseArea{
     float : left;
     height : 80%;
-    width : 70%;
+    width : 100%;
 }
+
 .chooseArea h2,h3{
     display : inline;
 }
 
-.imgArea{
-    float : right;
-
+.checkoutArea{
+    position: absolute;
+    top : 20%;
+    right : 10% ;
+    width : 110px;
+    height : 100px;
 }
 
 .imgArea img{
@@ -204,11 +211,11 @@ a{
 }
 
 .progBar ol{
-    width : 80%;
+    width : 100%;
     position: absolute;
     //margin: auto;
     bottom:0px;
-    left : 40%
+    left:30%;
 }
 
 .carousel-indicators-numbers li{
@@ -284,8 +291,109 @@ a{
     margin-top: 5px;
 }
 
-.checkbox-inline input{
+#i{
+    background: url(../images/i.png) no-repeat;
+    float : right;
+}
 
+#rectangle{
+    background: url(../images/rectangleHead.png) no-repeat;
+    position : absolute;
+    right : 0;
+    top:0;
+    width : 100px;
+    height : 40px;
+}
+
+#circle{
+    background: url(../images/roundHead.png) no-repeat;
+    position : absolute;
+    right : 0;
+    top:0;
+    width : 100px;
+    height : 40px;
+}
+
+#triangle{
+    background: url(../images/triangleHead.png) no-repeat;
+    position : absolute;
+    right : 0;
+    top:0;
+    width : 80px;
+    height : 40px;
+}
+
+#nightVision{
+    height : 30px;
+    line-height: 1px;
+    margin-top: 1px;
+    top : -36px;
+    left: 27%;
+    background: #ffffff;
+}
+
+#nightVision input{
+    margin-top:-6px;
+}
+
+.checkbox-inline input{
+    margin-top: 5px;
+}
+
+.newButton{
+    background: #821122;
+    height : 30px;
+    width : 100px;
+	font-family: "Patrick hand";
+    color : #ffffff;
+    border-radius: 10px;
+    border : 1px solid #000000;
+
+}
+
+.list-group{
+
+}
+
+.btn-primary{
+    position: relative;
+    height : 40px;
+    width : 90%;
+    text-align: left;
+    background: #ffffff;
+    border : 1px solid #c6c6c6;
+    border-radius : 5px;
+    line-height: 25px;
+    color : #5a5a5a;
+}
+
+.btn-primary:hover{
+    background: #821122;
+}
+
+.btn-primary.active{
+    background: #821122;
+}
+
+.btn-primary.active:hover{
+    background: #821122;
+}
+
+.glyphicon-info-sign{
+    float : right;
+    margin-top: 4px;
+}
+
+input[type=checkbox] {
+    -webkit-appearance:button;
+    margin-top: 3px;
+    width:15px;
+    height:15px;
+}
+
+input[type=checkbox]:checked {
+    background: #821122;
+    border-radius: 5px;
 }
 
 @media screen and (max-width : 1269px){
@@ -414,4 +522,7 @@ a{
 		/* reset white-space wrapping */
 		//white-space: normal;
 	}
+    .checkoutArea{
+        display : none;
+    }
 }
