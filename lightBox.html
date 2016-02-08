@@ -23,6 +23,7 @@
     </head>
     <body>
         <div id="wrapper2" >
+            <div id="closeLightBoxButton" class="exitButton2"></div>
             <div class="lightBox">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <!-- Wrapper for slides -->
@@ -351,9 +352,12 @@
                 <div class="panel-body" id="customeImage"></div>
             </div>
 -->
-                <p>Add to chart</p>
-                <p>Add to wish list</p>
-                <input class="newButton" type="submit" value="BUY NOW!">
+                 <div class="btn-group">
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" ></span> Add to chart </button> <br><br>
+                     <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add to wish list </button>
+                </div>
+
+                <input class="newButton" id="showSavePanel" type="submit" value="BUY NOW!">
         </div>
 </div>
 <!--End of items -->
@@ -394,6 +398,7 @@
         </div>
 
 <!--        Hidden Panel to save the robot-->
+<!--
   <div class="panel panel-default" id="toSavePanel">
       <div class="panel-heading">
           <h3 class="panel-title">Please provide the name</h3>
@@ -408,6 +413,29 @@
           <div class="alert alert-success" role="alert" id="saveSuccess"><b><b>Success!</b></div>
       </div>
   </div>
+-->
+
+        <div id="toSavePanel">
+            <div id="hideSavePanel" class="exitButton"></div>
+            <h1>ORDER SUMMARY</h1>
+            <h2>Item number : ???</h2>
+            <h2>Total Price: <span id="r.price">2199</span>$</h2>
+            <h2><strong>Free delivery over 1000$</strong></h2>
+            <label class="terms"><input type="checkbox" value="">I agree to the terms</label>
+            <input class="newButton" id="payNowButton" type="submit" value="PAY NOW!">
+            <h3>Support : <a href="mailto://support@mycyborg.com">support@mycyborg.com</a></h3>
+            <h3>Sales : <a href="mailto://sales@mycyborg.com">sales@mycyborg.com</a></h3>
+        </div>
+        <div id="checkOutPanel">
+            <div id="hideSavePanel2" class="exitButton"></div>
+            <h1>ORDER COMPLETED!</h1>
+            <h2>Your order number : <span id="orderNum">2873462</span></h2>
+            <h3>You can review your orders from your account under orders history</h3><br>
+            <input class="newButton" id="continueButton" type="submit" value="CONTINUE">
+
+<!--            <div id="hideSavePanel2"><input class="newButton" type="submit" value="BACK"></div>-->
+
+        </div>
 
 <!--        Initializing Script Faster -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.0.3/bootstrap-slider.js"></script>

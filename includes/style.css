@@ -14,7 +14,7 @@ a{
 
 body{
     height : 100%;
-    background : #E9E8EA;
+    background : #f7f6f6;
 }
 
 #wrapper{
@@ -42,23 +42,34 @@ header{
 
 .firstMenuBar{
     font-size:1.3vw;
-     padding-top: 43px;
+    padding-top: 43px;
+}
 
+.firstMenuBarReports{
+    line-height: 80px;
+    display: inline;
 }
 
 .firstMenuBar a{
-    color : #18001E;
+    color : #821122;
     padding-right : 15px;
     padding-left: 15px;
     font-family:"Patrick Hand" , tahoma , arial;
     padding-bottom:10px;
     padding-top:10px;
-
 }
 
 .firstMenuBar a:hover{
-    background: #ebebe0;
+    background: #821122;
     transition: 0.4s ease-in;
+    color : #f7f6f6;
+}
+
+/*problem*/
+.firstMenuBar a:first-child{
+    background: #821122;
+    transition: 0.4s ease-in;
+    color : #f7f6f6;
 }
 
 
@@ -112,18 +123,24 @@ form{
     font-family: "Patrick hand" , tahoma , arial;
 }
 
+
+
 nav{
     height : 25px;
     width : 100%;
-    background: #ebebe0;
+    background: #821122;
 }
 
 .menuBar a{
     padding-right:30px;
+    color : #f7f6f6;
+
 }
 
-.menuBar:first-child{
+.menuBar a:first-child{
 	margin-left:15%;
+    font-weight: bold;
+
 }
 
 
@@ -131,8 +148,9 @@ nav{
 
 nav a:hover{
     transition: 0.25s ease-in;
-    border-bottom: 4px solid #7f87a2;
-    color : #7f87a2;
+    border-bottom: 2px solid #f7f6f6;
+    color : #f7f6f6;
+    text-decoration: none;
 }
 
 
@@ -488,13 +506,18 @@ main h1{
 }
 
 #plus{
-	background: url('../images/plus.png') no-repeat;
+    position: absolute;
 	float:right;
-	width:35px;
-	height:32px;
-	margin-right:40px;
-	margin-top:-45px;
+	right:40px;
+	top:45px;
+}
 
+#plus .btn{
+    color : #821122;
+    border-radius: 50%;
+    width : 50px;
+    height : 50px;
+    border : 2px solid #821122;
 }
 
 
@@ -512,75 +535,517 @@ main h1{
     margin-top: 10px;
 }
 
+.smallMobileMenu{
+     display: none;
+}
 
+
+.firstMenuBarReports .newButton{
+    display: inline;
+    background: #f7f6f6;
+    height : 30px;
+    width : 10%;
+	font-family: "Patrick hand";
+    color : #821122;
+    border-radius: 10px;
+    border : 1px solid #821122;
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: normal;
+    font-size: 20px;
+}
+
+.firstMenuBarReports .newButton:hover{
+    color : #f7f6f6;
+    background: #821122;
+    transition: 0.2s ease-in;
+}
+
+#reportsButton{
+    color : #f7f6f6;
+    background: #821122;
+}
+
+#mainReports{
+    max-width : 100%;
+    background: #f7f6f6;
+}
+
+.bubblesArea{
+    width : 80%;
+    margin: auto;
+}
+
+.bubblesArea .secwrap{
+    position : absolute;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+    background: #ffffff;
+    margin-left:4%;
+    cursor: pointer;
+
+
+}
+
+.bubblesArea .secwrap:hover{
+    background: #821122;
+    transition: 0.2s ease-in;
+
+}
+
+.bubblesArea .secwrap h2:hover{
+
+}
+.bubblesArea .secwrap h2{
+    color: #990000;
+    font-family: "Patrick hand";
+    text-align: center;
+    margin-top: 35%;
+}
+
+#Marketing{
+    top : 3%;
+    transition: 0.2s cubic-bezier(.93, .2, .3, .76);
+}
+#Marketing:hover{
+    top : 1%;
+}
+
+#CPA{
+    left : 36%;
+    top : 9%;
+}
+
+#CPA:hover{
+    top:7%;
+}
+
+#Bookkeeping{
+    top : 11%;
+    left : 20%;
+}
+#Bookkeeping:hover{
+    top:9%;
+    left:22%;
+}
+
+#Counselor{
+    left : 46%;
+    top : 15%;
+}
+
+#Counselor:hover{
+    top:17%;
+    left:45%;
+}
+
+
+
+#CustomerService{
+    top : 20%;
+    left : 28%;
+}
+#CustomerRetention{
+    top : 5%;
+    left : 54%;
+}
+#CustomerRetention:hover{
+    top:3%;
+}
+
+#Advertising{
+    top : 10%;
+    left : 65%;
+}
+
+.timesArea{
+    display: none;
+    margin: auto;
+    margin-top: 100px;
+    width : 80%;
+    height : 300px;
+    text-align: center;
+}
+
+.timesArea .secwrap{
+    display: inline-block;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+    background: #ffffff;
+    margin:3vw;
+    cursor: pointer;
+}
+
+.timesArea .secwrap:hover{
+    background: #821122;
+    transition: 0.2s ease-in;
+    color : #f7f6f6;
+}
+
+.timesArea .secwrap h2:hover{
+    color : #f7f6f6;
+
+}
+.timesArea .secwrap h2{
+    color: #990000;
+    font-family: "Patrick hand";
+    text-align: center;
+    margin-top: 35%;
+}
+
+.backArrow{
+    position: absolute;
+    top : 2%;
+    left : 3%;
+    background: url(../images/backArrow.gif) no-repeat;
+    width : 70px;
+    height : 43px;
+    cursor: pointer;
+}
+
+#Diagram{
+    margin: auto;
+    width : 80%;
+    background: #f7f6f6;
+    font-family: "Patrick hand";
+    font-size:17px;
+}
+
+.diagramChart{
+    width : 80%;
+    margin : auto;
+    background: #f7f6f6;
+    height : 400px;
+    margin-top: 5px;
+}
+
+.hiddenRow {
+    padding: 0px !important;
+}
+
+#demo1{
+    height: 90px;
+    border : 1px solid black;
+}
+.accordion-toggle:hover{
+    background: #d4a4a4;
+    cursor: pointer;
+}
+.row1{
+    float: left;
+    width : 20%;
+    height : 100%;
+    border : 1px solid black;
+}
+
+.row1 h1{
+    margin-top: 6px;
+    font-size : 2vw;
+}
+
+.row1 h2{
+    margin-top: 0px;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.row2{
+    float: left;
+    height: 100%;
+    width : 60%;
+    border : 1px solid black;
+}
+
+.row3{
+    float: left;
+    height: 100%;
+    width : 20%;
+    border : 1px solid black;
+}
+
+#mainReports #Diagram label{
+    margin-right: 3vw;
+}
+
+input[type=checkbox] {
+    -webkit-appearance:button;
+    margin-top: 3px;
+    width:15px;
+    height:15px;
+}
+
+input[type=checkbox]:checked {
+    background: #821122;
+    border-radius: 5px;
+}
+
+#Diagram .btn-group{
+    float : right ;
+    margin-right: 2vw;
+    margin-top: -32px;
+    height : 50px;
+    width : 200px;
+}
+
+#Diagram .btn-group .btn{
+    width: 50px;
+    height : 40px;
+    color : #821122;
+}
+
+#info{
+	position : relative;
+	width:500px;
+	height:400px;
+	border: 6px solid #821122;
+	margin-top:100px;
+	float:left;
+	margin-right: 5%;
+	margin-left:10%;
+    padding: 2px;
+}
+
+#readyrob{
+
+	position : relative;
+	width:300px;
+	height:400px;
+	/*border: 6px solid #821122;*/
+	margin-top:100px;
+	float:left;
+	margin-right: 2%;
+	margin-left:5%;
+    padding: 2px;
+    background: url('../images/readyrob.png') no-repeat;
+
+}
+
+#buyitem{
+	position : relative;
+	width:500px;
+	height:100px;
+
+	margin-top:520px;
+	margin-right: 2%;
+	margin-left:10%;
+    padding: 2px;
+
+
+}
+
+#buy{
+	/*margin-right: 2%;
+	margin-left:10%;
+    padding: 2px;*/
+    width:480px;
+    background: #821122;
+     color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+
+}
+
+
+#star{
+	position : relative;
+	width:50px;
+	height:40px;
+	/*border: 1px solid #821122;*/
+	margin-top:10px;
+	float:left;
+	margin-right: 10%;
+	margin-left:80%;
+    padding: 2px;
+    background: url('../images/cart.png') no-repeat;
+
+}
+
+#cart{
+	position : relative;
+	width:50px;
+	height:40px;
+	border: 1px solid #821122;
+	margin-top:10px;
+	float:left;
+	margin-right: 2%;
+	margin-left:20%;
+    padding: 2px;
+    background: url('../images/cart.png') no-repeat;
+}
+
+
+#toSavePanel{
+    position: absolute;
+    margin-left: 30%;
+    background: #ffffff;
+    border-radius : 15px;
+    top : 30px;
+    width : 270px;
+    height : 330px;
+    z-index: 999;
+    display: none;
+    box-shadow:  0px 7px 5vw 456px rgba(0, 0, 0, 0.85);
+    padding : 20px 20px 20px 20px;
+}
+
+#checkOutPanel{
+    position: absolute;
+    margin-left: 30%;
+    background: #ffffff;
+    border-radius : 15px;
+    top : 30px;
+    width : 270px;
+    height : 230px;
+    z-index: 999;
+    display: none;
+    box-shadow:  0px 7px 5vw 456px rgba(0, 0, 0, 0.85);
+    padding : 20px 20px 20px 20px;
+}
 
 @media screen and (max-width:890px)
 {
-	header{
+    #wrapper{
+        background: #f7f6f6;
+    }
+
+    header{
 	    height : 65px;
-	    font-family: tahoma;
+	    font-family: tahoma, arial, sans-serif;
 	}
+
+    main{
+        background: #f7f6f6;
+    }
+
+    header a{
+
+    }
 
 	#logo{
-		float:left;
-		width: 140px;
+        margin-left: 5%;
+		width: 130px;
 		height: 60px;
-		background: url('../images/logo2.gif') no-repeat;
+		background: url('../images/logo2.gif') no-repeat center;
 	}
 
-    #wrapper{
-        width : 100%;
+    .smallMobileMenu{
+        margin : 6px;
+        float: left;
+        display: inline;
+        width : 25%;
+        height : 50px;
     }
-	.firstMenuBar{
+
+    #smallMenuRight{
+        float:right;
+        text-align: right;
+
+    }
+
+    .smallMobileMenu a{
+        display: inline-block;
+        height : 39px;
+        width : 40px;
+    }
+
+    .smallMobileMenu div{
+        height : 39px;
+        width : 45px;
+    }
+
+    #hamburger{
+        background : url(../images/hamburger3.gif) no-repeat;
+    }
+
+    .smallMobileMenu ul{
         display: none;
-        border : 1px solid red;
-        margin-top: 30px;
+        padding-top : 3px;
+        text-align: center;
+        z-index: 999;
+        list-style: none;
+        position: absolute;
+        top:1%;
+        left:50px;
+        background: #821122;
+        width : 150px;
+        height : 130px;
+        border-radius: 10px;
+    }
+
+        .smallMobileMenu ul li{
+        font-family: "Patrick hand";
+        color : #f7f6f6;
+        font-size : 14px;
+        padding-top: 7px;
+        width : 90%;
+        margin: auto;
+        border-bottom: 1px solid #f7f6f6;
+        cursor: pointer;
+    }
+
+    .smallMobileMenu ul li:hover{
+        color : #b9b4b4;
+    }
+
+
+    #search{
+        background : url(../images/search3.gif) no-repeat left;
+    }
+
+    #heart{
+        background : url(../images/heart1.gif) no-repeat left;
+    }
+
+    #bag{
+        background : url(../images/bag1.gif) no-repeat left;
+    }
+
+    #clear{
+        clear:none;
+    }
+
+
+	.firstMenuBar{
+        text-align: center;
+        width: 100%;
+        float: left;
+        background: #821122;
+        padding-top: 0px;
 	}
 
 	.firstMenuBar a{
-        font-size:1.9vw;
-        padding-top: 3px;
-        color : #18001E;
-        padding-right : 2px;
+        font-size:20px;
+        padding-top: 0px;
+        color : #f7f6f6;
+        padding-left : 2px;
 	}
 
 
 	.firstMenuBar a:hover{
-	    background: #d4e3fc;
+	    background: none;
+        color : #f7f6f6;
+        text-decoration: underline;
 	    transition: 0.4s ease-in;
 	}
 
-    main{
-        width : 100%;
-    }
+
 
 	#personDetails{
-		 background: #CEC5D0;
-		 width:100px;
-		 height:70px;
-		 font-size:11px;
-		 display: block;
-		 float:right;
-		 margin-top:-50px;
-		 display:none;
-
-	}
-
-	#personDetails p{
-		width:90px;
-		height:30px;
-		float:right;
-		padding-top:-10px;
 		 display:none;
 	}
 
-	#personDetails img{
-		width:15px;
-		height:15px;
-		display:block;
-		float:right;
-		 display:none;
-	}
 
 	input[type=text]{
 		border-radius:8px;
@@ -596,22 +1061,14 @@ main h1{
 		margin-top:6px;
 
 	}
-	.menuBar{
-	    display : none;
-        visibility: hidden;
-	}
+
 
     .dropdown{
-        display : block;
     }
 
     .btn-primary{
         margin-right: 1px;
         font-size: 2vw;
-    }
-	nav{
-        height : 0px;
-        line-height: 60px;
     }
 
     .dropdown-menu{
@@ -627,23 +1084,40 @@ main h1{
         z-index: 999;
     }
 
+    nav{
+        margin: auto;
+        width : 85%;
+        background: #f7f6f6;
+    }
+
+    .menuBar{
+        text-align: center;
+        font-size:1px;
+        margin-top:20px;
+        background: #821122;
+	}
+
+    .menuBar a:first-child{
+        margin-left : 0px;
+
+    }
+
 	.menuBar a{
-	    font-size:2vw;
-        display : block;
+	    font-size : 10px;
+        display : inline;
+        margin-right: 2.6vw;
+        padding-right: 0px;
+
+        color : #f7f6f6;
 	}
 
     .addButton{
         top : 0px;
     }
 
-
-/*
-	nav a:hover{
-	    transition: 0.25s ease-in;
-	    border-bottom: 4px solid #7f87a2;
-	    color : #7f87a2;
-	}
-*/
+    #left_list{
+        display: none;
+    }
 
 }
 

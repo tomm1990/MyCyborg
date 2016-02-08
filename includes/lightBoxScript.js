@@ -1,12 +1,40 @@
 $(document).ready(function(){
     //show Save Panel
     $("#showSavePanel").click(function(){
+    //$("#myCarousel").carousel( {interval: 0} );
     $("#toSavePanel").show(500);
     });
 
     //Hide Save Panel
     $("#hideSavePanel").click(function(){
     $("#toSavePanel").hide(500);
+    //$("#myCarousel").carousel( {interval: 0} );
+    });
+
+    $("#hideSavePanel2").click(function(){
+    $("#checkOutPanel").hide(500);
+    //$("#myCarousel").carousel( {interval: 0} );
+    });
+
+    //BUY NOW button was clicked -> show toSavePanel
+    $("#payNowButton").click(function(){
+    $("#toSavePanel").hide();
+    $("#checkOutPanel").show();
+    //$("#myCarousel").carousel( {interval: 0} );
+    });
+
+    // CUNTINUE button was clicked -> to order.html
+    $("#continueButton").click(function(){
+        location.href = 'order.html';
+        //$(this).changePage("order.html",{transition:"slide"});
+    });
+
+
+
+    $(".carousel-control").click(function(){
+        $("#myCarousel").carousel( {interval: 99999999999} );
+        console.log("carousel-control clicked from lightBoxSript");
+
     });
 
     //Save, hide, and close Save Panel and move to save.html
@@ -24,7 +52,7 @@ $(document).ready(function(){
 
     // Activate Carousel
     $("#myCarousel").carousel({
-        interval: 999999999
+        interval: 0
 
     });
 });
@@ -75,6 +103,7 @@ $(document).ready(function(){
 			e    = $.Event('show');
 
 		this.$element.trigger(e);
+        $("#myCarousel").carousel( {interval: 0} );
 
 		if (this.isShown || e.isDefaultPrevented()) return;
 
@@ -126,9 +155,11 @@ $(document).ready(function(){
         e = $.Event('hide');
 
         this.$element.trigger(e);
+        $("#myCarousel").carousel( {interval: 0} );
 
         if (!this.isShown || e.isDefaultPrevented()) return;
 
+        this.isShown = false;
         this.isShown = false;
 
         this.escape();
@@ -152,7 +183,7 @@ $(document).ready(function(){
 		{
 			this.$element.on('keyup.dismiss.lightbox', function ( e )
 			{
-				e.which == 27 && that.hide();
+				e.which == 0 && that.hide();
 			});
 		}
 		else if (!this.isShown)
@@ -230,6 +261,8 @@ $(document).ready(function(){
 			callbacks.fire();
 		};
 		preloader.src = $image.attr('src');
+        $("#myCarousel").carousel( {interval: 0} );
+
 	};
 
 /* LIGHTBOX PLUGIN DEFINITION
@@ -244,6 +277,7 @@ $(document).ready(function(){
 			var $this   = $(this);
 			var data    = $this.data('lightbox');
 			var options = $.extend({}, $.fn.lightbox.defaults, $this.data(), typeof option == 'object' && option);
+            $("#myCarousel").carousel( {interval: 0} );
 			if (!data) $this.data('lightbox', (data = new Lightbox(this, options)));
 
 			if (typeof option == 'string')
@@ -259,7 +293,7 @@ $(document).ready(function(){
 		show: true
 	};
 
-	$.fn.lightbox.Constructor = Lightbox;
+	//$.fn.lightbox.Constructor = Lightbox;
 
 /* LIGHTBOX NO CONFLICT
   * ================= */
@@ -281,6 +315,7 @@ $(document).ready(function(){
 		var option = $target.data('lightbox') ? 'toggle' : $.extend({ remote:!/#/.test(href) && href }, $target.data(), $this.data());
 
 		e.preventDefault();
+        $("#myCarousel").carousel( {interval: 0} );
 
 		$target
 			.lightbox(option)
@@ -344,6 +379,7 @@ $(document).ready(function(){
         var value = $this.data('value');
 
         e.preventDefault();
+        $("#myCarousel").carousel( {interval: 0} );
 
         $target.progressbar(value);
     });

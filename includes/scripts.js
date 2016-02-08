@@ -1,5 +1,45 @@
 $( "document" ).ready(function() {
 //    alert('asuschusdanc');
+    $("#hamburger").click(function(){
+       $(".smallMobileMenu ul").toggle(200);
+        //console.log("hamburger was clocked");
+    });
+
+    //Marketing button was clicked
+    //timesArea sets up
+    $("#Marketing").click(function(){
+       $(".bubblesArea").toggle(200);
+        $(".timesArea").toggle(200);
+    });
+
+    //backArrow button was clocked
+    //bubblesArea sets up
+    $(".backArrow").click(function(){
+        $(".bubblesArea").toggle(200);         $(".timesArea").toggle(200);
+    });
+
+    // report.html -> hover over secwrap changes h2 color
+    $( "#mainReports .secwrap" ).hover(function() {
+        $(this).find("h2").css("color","#f7f6f6");
+    });
+
+    // report.html-> mouse leave makes h2 original color
+    $( "#mainReports .secwrap" ).mouseleave(function() {
+        $(this).find("h2").css("color","#821122");
+    });
+
+    $(".carousel-control").click(function(){
+        $("#myCarousel").carousel( {interval: 999999999} );
+        console.log("carousel-control clicked from index");
+    });
+
+    //reports.html -> one of the weeks was clicked -> move to diagram.html
+    $(".timesArea #LastWeek").click(function(){
+        $(".timesArea #LastWeek").hide(500 , function(){
+            location.href = 'diagram.html';
+        });
+    });
+
 
 
 //$("document").ready(
@@ -17,7 +57,22 @@ $( "document" ).ready(function() {
             $("#loader").html(html);
 
         }
-    })
+    });
+
+    $.ajax({
+        type : "POST",
+        url : "includes/diagramAction1.php",
+        cache : true,
+        success:function(html){
+            $("tbody").html(html);
+        }
+    });
+
+    $("td").each(function() {
+        console.log(  "test"  );
+
+    // compare id to what you want
+    });
 });
 //    return false;
 //}

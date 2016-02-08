@@ -8,6 +8,7 @@ header, footer, main, nav, aside, section, article{
 }
 
 body{
+    position : relative;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     //font-size: 14px;
     /* line-height: 1.42857143; */
@@ -24,14 +25,18 @@ a{
     height : 420px;
     width : 60vw;
     //border : 12px solid #adadad;
-    //border-radius: 10px;
+    border-radius: 15px;
 }
 
 .lightBox{
     height : 100%;
     background: #ffffff;
     //border : 1px solid #000000;
-    //border-radius : 10px;
+    border-radius : 15px;
+}
+
+.item.active{
+    border-radius: 15px;
 }
 
 
@@ -70,7 +75,7 @@ a{
 .featherlight .featherlight-content {
 		/* make content container for positioned elements (close button) */
 		position: relative;
-
+        border-radius: 15px;
 		/* position: centering vertical and horizontal */
 		text-align: left;
 		vertical-align: middle;
@@ -135,10 +140,27 @@ a{
 
 .checkoutArea{
     position: absolute;
-    top : 20%;
+    top : 15%;
     right : 10% ;
-    width : 110px;
-    height : 100px;
+    width : 150px;
+    height : 140px;
+    text-align: center;
+}
+
+.checkoutArea button{
+    border-radius: 0%;
+    width : 100%;
+    text-align: left;
+    font-size : 82%;
+}
+
+.checkoutArea .glyphicon-shopping-cart{
+    color : #ff9212;
+}
+
+.checkoutArea .glyphicon-star{
+    color : #ffe838;
+
 }
 
 .imgArea img{
@@ -276,14 +298,116 @@ a{
 
 #toSavePanel{
     position: absolute;
+    margin-left: 40%;
+    background: #ffffff;
+    border-radius : 15px;
     top : 30px;
-    left : 25%;
-    width : 50%;
-    height : 47vh;
-    margin: auto;
+    width : 270px;
+    height : 330px;
     z-index: 999;
     display: none;
-    box-shadow: 7px 7px 30px #000000;
+    box-shadow:  0px 7px 5vw 456px rgba(0, 0, 0, 0.85);
+    padding : 20px 20px 20px 20px;
+}
+
+#toSavePanel h1 ,h2, h3{
+    width : 100%;
+	color:#990000;
+	font-family: "Patrick hand";
+}
+
+#toSavePanel h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+#toSavePanel h2{
+    margin-bottom: -10px;
+    font-size: 15px;
+    padding-left : 25%;
+}
+
+#toSavePanel h3{
+    font-family: tahoma , arial , sans-serif;
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    padding-left : 15%;
+    color : #000000;
+}
+
+#toSavePanel .terms{
+    margin-top : 20px;
+    display: block;
+    height : 20px;
+    padding-left: 20%;
+    color:#990000;
+	font-family: "Patrick hand";
+    text-decoration: underline;
+}
+
+#toSavePanel input[type=checkbox]{
+    margin-right: 5px;
+}
+
+#checkOutPanel{
+    position: absolute;
+    margin-left: 40%;
+    background: #ffffff;
+    border-radius : 15px;
+    top : 30px;
+    width : 270px;
+    height : 230px;
+    z-index: 999;
+    display: none;
+    box-shadow:  0px 7px 5vw 456px rgba(0, 0, 0, 0.85);
+    padding : 20px 20px 20px 20px;
+}
+
+#checkOutPanel h1 ,h2, h3{
+    width : 100%;
+	color:#990000;
+	font-family: "Patrick hand";
+}
+
+#checkOutPanel h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+#checkOutPanel h2{
+    margin-bottom: -10px;
+    font-size: 15px;
+    padding-left : 15%;
+}
+
+#checkOutPanel h3{
+    font-family: tahoma , arial , sans-serif;
+    display: block;
+    margin-top: 18px;
+    font-size: 11px;
+    padding-left : 15%;
+    color : #000000;
+}
+
+.exitButton{
+    position: absolute;
+    left : 3px;
+    top:3px;
+    background: url(../images/exitButton2.gif) no-repeat right;
+    width : 30px;
+    height : 30px;
+    cursor:pointer;
+}
+
+.exitButton2{
+    position: absolute;
+    left :-43px;
+    top:13px;
+    background: url(../images/exitButton2.gif) no-repeat;
+    width : 30px;
+    height : 30px;
+    cursor:pointer;
 }
 
 .alert-success{
@@ -341,6 +465,7 @@ a{
 }
 
 .newButton{
+    margin-top: 2vh;
     background: #821122;
     height : 30px;
     width : 100px;
@@ -351,9 +476,32 @@ a{
 
 }
 
-.list-group{
-
+#toSavePanel .newButton{
+    background: #f7f6f6;
+    height : 30px;
+    width : 80%;
+	font-family: "Patrick hand";
+    color : #821122;
+    border-radius: 10px;
+    border : 0px solid #000000;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
+
+#checkOutPanel .newButton{
+    background: #f7f6f6;
+    height : 30px;
+    width : 80%;
+	font-family: "Patrick hand";
+    color : #821122;
+    border-radius: 10px;
+    border : 0px solid #000000;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 
 .btn-primary{
     position: relative;
