@@ -8,12 +8,12 @@
 
     while( $row = mysqli_fetch_assoc($result) ){
         echo "<tr data-toggle='collapse' data-target='#demo1' class='accordion-toggle'>";
-        echo "<td id='r_num'>".$row["r.num"]."</td>";
-        echo "<td id='r_name'>".$row["r.name"]."</td>";
-        echo "<td id='r_id'>".$row["r.id"]."</td>";
-        echo "<td id='r_sales'>".$row["r.sales"]."%</td>";
-        echo "<td id='r_rate'>".$row["r.rate"]."/5</td>";
-        echo "<td class='text-success'>".$row["r.price"].".0$</td>";
+        echo "<td>".$row["r.num"]."</td>";
+        echo "<td>".$row["r.name"]."</td>";
+        echo "<td>".$row["r.id"]."</td>";
+        echo "<td>8.5%</td>";
+        echo "<td>5/5</td>";
+        echo "<td class='text-success'>".$row["r.price"].".00$</td>";
     }
 
     mysqli_free_result($result);

@@ -1,3 +1,18 @@
+var i=0;
+var ar=['playing video game','animal-care','handy-man','dancer', 'babysitter'];
+
+$("document").ready(function(){
+
+	for(; i<5; i++){
+	 $(".leftSide_list").append('<lable><a href="#"><section id="little_pic"></section> <p id="little_text"> '+ar[i] +' </p></a></lable>');
+	}
+});
+
+
+
+
+
+
 $( "document" ).ready(function() {
 //    alert('asuschusdanc');
     $("#hamburger").click(function(){
@@ -66,12 +81,6 @@ $( "document" ).ready(function() {
         success:function(html){
             $("tbody").html(html);
         }
-    });
-
-    $("td").each(function() {
-        console.log(  "test"  );
-
-    // compare id to what you want
     });
 });
 //    return false;
