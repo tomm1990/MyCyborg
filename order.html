@@ -25,20 +25,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-<!--    some hnage inside order.html-->
-<!--    another hnage inside order.html-->
-
     <body>
         <div id="wrapper">
 <!--            Start of header-->
-            <header>
+           <header>
+
+            <div class="smallMobileMenu">
+                <a id="hamburger" href="#"><div id="hamburger"></div></a>
+                    <ul id="some">
+                        <li>LOG OUT</li>
+                        <li>MY ACCOUNT</li>
+                        <li>NOTIFICATION</li>
+                        <li>HELP & CONTACT</li>
+                    </ul>
+                <a href="#"><div id="search"></div></a>
+            </div>
             <a href="#" alt="Logo" title="Logo" id="logo"></a>
+            <div id="smallMenuRight" class="smallMobileMenu">
+                <a href="#" id="heart"></a>
+                <a href="#" id="bag"></a>
+            </div>
             <section class="firstMenuBar">
                 <a title="Recommended Robot" href="#">Recommended Robot</a>
                 <a href="#">My Robot</a>
                 <section id="personDetails">
                 	<img src="images/logout.png">
-             		<p>Hey! Moshe Cohen  <a href="#"> </a></p>
+             		<p>Hey! Moshe Cohen </p>
 <!--             		Start of Form-->
                     <form action="#"method="get">
              		<label><input type="text" name="search" placeholder="Search..." ></label>
@@ -53,22 +65,20 @@
                              <span class="caret"></span>
                          </button>
                          <ul class="dropdown-menu">
-                             <li><a href="#">Family and Maintenance</a></li>
-                             <li><a href="#">Lifestyle</a></li>
-                             <li><a href="#">Animal Care</a></li>
-                             <li><a href="#">Other</a></li>
+                              <li><a href="index.html">Family and Maintenance</a></li>
+                             <li><a href="lifeStyle.html">Lifestyle</a></li>
+                             <li><a href="others.html">Other</a></li>
                          </ul>
-                         <button class="btn btn-primary" type="button">My Robot</button>
+                         <button class="btn btn-primary" id="myRobot" type="button">My Robot</button>
                      </div>
                  </div>
              </nav>
             </header>
             <nav>
             	<section class="menuBar">
-	                <a href="#">Family & Maintenance Robots</a>
-	                <a href="#">LifeStyle Robots</a>
-	                <a href="#">Animal-care Robots</a>
-	                <a href="#">Others</a>
+	                <a href="index.html">Family & Maintenance Robots</a>
+	                <a href="lifeStyle.html">LifeStyle Robots</a>
+	                <a href="others.html">Others</a>
                 </section>
             </nav>
 <!--            Start of Main-->
@@ -80,38 +90,51 @@
                 <div id="d3">you may like...</div>
                 <div class="leftSide_list">
 
-                    Inbar :
-                    Put the list items inside
+
 
                 </div>
              </section>
 
-            <main>
 
 
+                <main id="order_main">
+
+                <section id="back"> <a href="index.html">
+        		  <span class="glyphicon glyphicon-arrow-left"></span>
+       			 </a></section>
                 <section id="info">
-                	<p>we need to get info about robot here </p>
+                	<h1>
+                		House Keeper
+                	</h1>
+                	<h3>
+                		<b>Your House Keeper Robot </b>will make sure your house will be spotless and clean<br>
+                		 and your laundry will be folded on your bed .<br>
+                		  <b>this robot is made of </b>steel and has a standart human eye ,
+                		  <br> taste sensors it also has the ability to rotate his wrist up to 360 degrees.
+
+                	</h3>
+
+                	<h1> 2992$ !!!!</h1>
+
                 </section>
 
                 <section id="readyrob"></section>
-
                 <section id="buyitem">
                     <button id="buy">BUY NOW!</button>
-                    <button id="star"> </button>
+                    <button type="button" id="shop_btn"class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" ></span> Add to chart </button>
+                     <button type="button"id="star_btn" class="btn btn-default"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add to wish list </button>
                 </section>
-          		 <!--<button id="cart"></section>-->
-
-
             </main>
 <!--            End of Main-->
             <div id="clear"></div>
-            ￼<footer>
-                <p>© 2016 MyCyborg, Inc. </p>
+               ￼<footer>
+                <!--<p>© 2016 MyCyborg, Inc. </p> -->
+                <a href="#">© 2016 MyCyborg, Inc.</a>
                 ￼￼<section id="facebook"></section>
-                ￼￼￼￼￼<section id="google"></section>
-                ￼￼￼￼￼￼<section id="link"></section>
-                ￼￼￼￼￼￼<section id="contactus"></section>
-            ￼￼</footer>
+       <section id="google"></section>
+             <section id="link"></section>
+<section id="contactus"></section>
+         </footer>
         </div>
          <script src="//code.jquery.com/jquery-latest.js"></script>
          <script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>

@@ -1162,3 +1162,32 @@ lable{
 }
 
 
+#shop_btn{
+	position : relative;
+	margin-left:30%;
+	margin-top:2%;
+	float: left;
+}
+
+#star_btn{
+	position : relative;
+	margin-left:1%;
+	margin-top:2%;
+	float: left;
+}
+
+#order_main{
+	background: #f7f6f6;
+
+}
+
+#save .btn-default{
+	background-color:#f7f6f6;
+}
+
+#back{
+	width:30px;
+	height:30px;
+	margin-left: 3%;
+	margin-top: 2%;
+}
