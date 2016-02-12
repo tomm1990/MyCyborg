@@ -66,7 +66,6 @@ header{
 }
 
 /*problem*/
-
 .firstMenuBar a:first-child{
     background: #821122;
     transition: 0.4s ease-in;
@@ -82,7 +81,7 @@ header{
 	 float:right;
 	 padding-top:3px;
 	 padding-right:10px;
- 	margin-top:-50px;
+ margin-top:-50px;
      background: #f7f6f6;
 
 
@@ -818,14 +817,14 @@ input[type=checkbox]:checked {
 
 #info{
 	position : relative;
-	width:500px;
+	width:42%;
 	height:400px;
-	border: 6px solid #821122;
-	margin-top:100px;
+	margin-top:5%;
 	float:left;
 	margin-right: 5%;
 	margin-left:10%;
     padding: 2px;
+     font-family:"Patrick Hand" , tahoma , arial;
 }
 
 #readyrob{
@@ -837,7 +836,7 @@ input[type=checkbox]:checked {
 	margin-top:100px;
 	float:left;
 	margin-right: 2%;
-	margin-left:5%;
+	margin-left:2%;
     padding: 2px;
     background: url('../images/readyrob.png') no-repeat;
 
@@ -860,7 +859,7 @@ input[type=checkbox]:checked {
 	/*margin-right: 2%;
 	margin-left:10%;
     padding: 2px;*/
-    width:480px;
+    width:85%;
     background: #821122;
      color: white;
     text-align: center;
@@ -1136,8 +1135,6 @@ input[type=checkbox]:checked {
 }
 
 
-
-
 #little_pic{
 	width:53px;
 	height:77px;
@@ -1161,6 +1158,8 @@ lable{
 
 }
 
+
+/* 11.2.16*/
 
 #shop_btn{
 	position : relative;
