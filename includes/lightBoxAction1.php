@@ -32,13 +32,6 @@
     }
     $id = $id+1;
     if ($result) mysqli_free_result($result);
-//if ($connection) mysqli_close($connection);
-
-//    $shipping_subtotal = 0.0;
-//    foreach($_GET['shipping'] as $shipping){
-//        //Sum all the shipping
-//        $shipping_subtotal += floatval(substr($shipping,1,strlen($shipping)-1));
-//    }
 
     include('db.php');
 

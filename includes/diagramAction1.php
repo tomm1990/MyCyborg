@@ -1,6 +1,6 @@
 <?php
     include('db.php');
-    $query = "Select * from robotsTable_221";
+    $query = "Select * from robotsTable_221 ORDER BY `r.id` ASC";
     $result = mysqli_query($connection , $query);
     if( !$result ){
         die("DB query failed from action.php");

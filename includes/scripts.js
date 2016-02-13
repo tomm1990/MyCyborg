@@ -61,8 +61,6 @@ $( "document" ).ready(function() {
 
 
 
-
-
     $.ajax({
         type : "POST",
         url : "includes/action.php",
@@ -81,4 +79,7 @@ $( "document" ).ready(function() {
             $("tbody").html(html);
         }
     });
+
+
+
 });

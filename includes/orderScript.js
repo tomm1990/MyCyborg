@@ -19,6 +19,6 @@ $(document).ready(function(){
         $("#name").html(robotName);
         $("#des").html(robotDes);
         $("#price").html(robotPrice);
-        $("#readyrob").css('background','robotPic');
+        $("#readyrob").css('background',robotPic);
     });
 });

@@ -4,50 +4,50 @@
        {
            "id": "301",
            "name": "HouseKeeper",
-           "price": 300,
-           "pic" : "images/cleaner.png",
+           "price": "300$",
+           "pic" : "url('../WebAppFinal1.2/images/cleaner.png') no-repeat",
            "des" : " House Keeper Robot will make sure your house will be spotless and clean, and your  laundry will be folded on your bed . this robot is made of steel and has a standart human eye ,and a taste sensors "
         },
         {
            "id": "302",
            "name": "Chef",
-           "price": 800,
-           "pic" : "images/cheff.png",
+           "price": "800$",
+           "pic" : "url('../WebAppFinal1.2/images/cheff.png') no-repeat",
            "des" : " Your Chef robot will cook for you in a private dinner or a crowded event. the robot has a standart human eye,a smell sensetivity of 80% , it has a taste sensors,teeth and can identify food ingredients "
         },
         {
            "id": "303",
            "name": "BabySitter",
-           "price": 1100,
-           "pic" : "images/babysitter.png",
+           "price": "1100$",
+           "pic" : "url('../WebAppFinal1.2/images/babysitter.png') no-repeat",
            "des" : " your Babysitter robot will take care of your kid at any time .the robot made of lego ,has taste sensors and thermometer .it has flexible hands and standart hearing ability. "
         },
         {
            "id": "304",
            "name": "Singing Teacher",
-           "price": 1800,
-           "pic" : "images/singer.png",
+           "price": "1800$",
+           "pic" : "url('../WebAppFinal1.2/images/singer.png') no-repeat",
            "des" : " Your singing teacher robot will improve your vocal abilities . The robot is made of steel ,it  can hear within a distance of 100 meter ,it can talk and move is harm in 360 degrees . "
         },
         {
            "id": "305",
            "name": "HandyMan",
-           "price": 2000,
-           "pic" : "images/111.png",
+           "price": "2000$",
+           "pic" : "url('../WebAppFinal1.2/images/111.png') no-repeat",
            "des" : "  Your Handyman robot will do any task around the house .the robot made of wood and has farsighteness up to 200 meter .can  lift weight up to 60kg and can rotate hands up to 360 degrees "
         },
          {
            "id": "306",
            "name": "Washing Car",
-           "price": 1700,
-           "pic" : "images/washer.png",
+           "price": "1700$",
+           "pic" : "url('../WebAppFinal1.2/images/washer.png') no-repeat",
            "des" : "  Your Washing Car robot will  shine your car anside and outside .the robot made of steel   lift weight up to 60kg and can rotate hands up to 360 degrees and has flexible legs "
         },
        {
            "id": "307",
            "name": "Nutritionist",
-           "price": 1400,
-           "pic" : "images/gray.png",
+           "price": "1400$",
+           "pic" : "url('../WebAppFinal1.2/images/gray.png') no-repeat",
            "des" : "  Your Nutritionist robot will make sure you eat eat healthy and orderly .The robot made of wood , has a standart human eye,a smell sensetivity of 80% , it has a taste sensors,teeth and can identify foo "
         }
     ]

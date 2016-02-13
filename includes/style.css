@@ -828,7 +828,6 @@ input[type=checkbox]:checked {
 }
 
 #readyrob{
-
 	position : relative;
 	width:300px;
 	height:400px;
@@ -838,21 +837,17 @@ input[type=checkbox]:checked {
 	margin-right: 2%;
 	margin-left:2%;
     padding: 2px;
-    background: url('../images/readyrob.png') no-repeat;
-
+    background: url('../images/gray.png') no-repeat;
 }
 
 #buyitem{
 	position : relative;
 	width:500px;
 	height:100px;
-
 	margin-top:520px;
 	margin-right: 2%;
 	margin-left:10%;
     padding: 2px;
-
-
 }
 
 #buy{
@@ -926,6 +921,64 @@ input[type=checkbox]:checked {
     box-shadow:  0px 7px 5vw 456px rgba(0, 0, 0, 0.85);
     padding : 20px 20px 20px 20px;
 }
+
+
+#little_pic{
+	width:53px;
+	height:77px;
+	background : url('../images/little_shadow.png') no-repeat ;
+	float:left;
+
+}
+
+#little_text{
+
+	margin-left:57px;
+	float:left;
+	clear:both;
+}
+
+lable{
+	display:block;
+	height:79px;
+	margin-bottom: 18px;
+	margin-left:30px;
+
+}
+
+
+/* 11.2.16*/
+
+#shop_btn{
+	position : relative;
+	margin-left:30%;
+	margin-top:2%;
+	float: left;
+}
+
+#star_btn{
+	position : relative;
+	margin-left:1%;
+	margin-top:2%;
+	float: left;
+}
+
+#order_main{
+	background: #f7f6f6;
+
+}
+
+#save .btn-default{
+	background-color:#f7f6f6;
+}
+
+#back{
+	width:30px;
+	height:30px;
+	margin-left: 3%;
+	margin-top: 2%;
+}
+
 
 @media screen and (max-width:890px)
 {
@@ -1132,61 +1185,4 @@ input[type=checkbox]:checked {
         display: none;
     }
 
-}
-
-
-#little_pic{
-	width:53px;
-	height:77px;
-	background : url('../images/little_shadow.png') no-repeat ;
-	float:left;
-
-}
-
-#little_text{
-
-	margin-left:57px;
-	float:left;
-	clear:both;
-}
-
-lable{
-	display:block;
-	height:79px;
-	margin-bottom: 18px;
-	margin-left:30px;
-
-}
-
-
-/* 11.2.16*/
-
-#shop_btn{
-	position : relative;
-	margin-left:30%;
-	margin-top:2%;
-	float: left;
-}
-
-#star_btn{
-	position : relative;
-	margin-left:1%;
-	margin-top:2%;
-	float: left;
-}
-
-#order_main{
-	background: #f7f6f6;
-
-}
-
-#save .btn-default{
-	background-color:#f7f6f6;
-}
-
-#back{
-	width:30px;
-	height:30px;
-	margin-left: 3%;
-	margin-top: 2%;
 }
