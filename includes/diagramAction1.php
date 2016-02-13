@@ -11,8 +11,8 @@
         echo "<td>".$row["r.num"]."</td>";
         echo "<td>".$row["r.name"]."</td>";
         echo "<td>".$row["r.id"]."</td>";
-        echo "<td>8.5%</td>";
-        echo "<td>5/5</td>";
+        echo "<td>".$row["r.sales"]."%</td>";
+        echo "<td>".$row["r.rate"]."/5</td>";
         echo "<td class='text-success'>".$row["r.price"].".00$</td>";
     }
 

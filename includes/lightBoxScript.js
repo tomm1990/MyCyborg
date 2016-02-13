@@ -1,8 +1,85 @@
+var flag1 = 0 , flag2 = 0 , total=0.0 ;
+
 $(document).ready(function(){
+    //couting checkboxes within #legsPropertiesPanel
+    var chbxs = $('#legsPropertiesPanel :checkbox[required]');
+    //couting checkboxes within #handsPropertiesPanel
+    var chbxs2 = $('#handsPropertiesPanel :checkbox[required]');
+//    console.log("length of chbxs is "+chbxs.length);
+//    console.log("length of chbxs2 is "+chbxs2.length);
+    var namedChbxs = {};
+
+    //each checkbox will receieve the mutual name
+    chbxs.each(function(){
+        var name = $(this).attr('name');
+//        console.log("Name is : "+this.name);
+        namedChbxs[name] = (namedChbxs[name] || $()).add(this);
+    });
+
+    //each checkbox will receieve the mutual name
+    chbxs2.each(function(){
+        var name = $(this).attr('name');
+//        console.log("Name is : "+this.name);
+        namedChbxs[name] = (namedChbxs[name] || $()).add(this);
+    });
+
+    //if one (or more) checkbox in #legsPropertiesPanel was checked
+    //then remove "required" from other checkboxes
+    chbxs.change(function(){
+        var name = $(this).attr('name');
+//        console.log("Name is : "+this.name);
+        var cbx = namedChbxs[name];
+//        console.log("Length of cbx is "+cbx.length);
+//        console.log("cbx.filter(':checked').length is "+cbx.filter(':checked').length);
+        if(cbx.filter(':checked').length > 0){
+            cbx.removeAttr('required');
+            flag1=1;
+        }else{
+            cbx.attr('required','required');
+        }
+    });
+
+    //if one (or more) checkbox in #handsPropertiesPanel was checked
+    //then remove "required" from other checkboxes
+    chbxs2.change(function(){
+        var name = $(this).attr('name');
+//        console.log("Name is : "+this.name);
+        var cbx = namedChbxs[name];
+//        console.log("Length of cbx is "+cbx.length);
+//        console.log("cbx.filter(':checked').length is "+cbx.filter(':checked').length);
+        if(cbx.filter(':checked').length > 0){
+            cbx.removeAttr('required');
+            flag2=1;
+        }else{
+            cbx.attr('required','required');
+        }
+    });
+
+
     //show Save Panel
-    $("#showSavePanel").click(function(){
-    //$("#myCarousel").carousel( {interval: 0} );
-    $("#toSavePanel").show(500);
+    $("#showSavePanel").click(function(event){
+        //var temp = Math.floor(Math.random() * 400) + 320;
+        $("#orderNum").html(Math.floor(Math.random()*8876423)+11324532);
+        $("#rnum").html(Math.floor(Math.random()*400)+320);
+
+        // if hands or legs were chosen
+        if(flag1==1&&flag2==1){
+            event.preventDefault();
+            $("#toSavePanel").show(500);
+        }
+        else if (flag2==0){
+            $('#foo').click();
+        }
+        var Price = $('input:checkbox:checked');
+        $.each( $(Price) , function(){
+            total += parseFloat($(this).attr("list"));
+            console.log("current number is :"+$(this).attr("list"));
+        });
+        console.log("Total is  : "+total);
+        //$("#orderNum").html("Math.floor(Math.random()*8876423)+11324532");
+        $("#rprice").html(total);
+        //$("p").html("Hello <b>world!</b>");
+        //$("#r.num1").html("Math.floor(Math.random()*400)+320");
     });
 
     //Hide Save Panel
@@ -13,14 +90,12 @@ $(document).ready(function(){
 
     $("#hideSavePanel2").click(function(){
     $("#checkOutPanel").hide(500);
-    //$("#myCarousel").carousel( {interval: 0} );
     });
 
     //BUY NOW button was clicked -> show toSavePanel
     $("#payNowButton").click(function(){
-    $("#toSavePanel").hide();
-    $("#checkOutPanel").show();
-    //$("#myCarousel").carousel( {interval: 0} );
+        $("#toSavePanel").hide();
+        $("#checkOutPanel").show();
     });
 
     // CUNTINUE button was clicked -> to order.html
@@ -32,14 +107,16 @@ $(document).ready(function(){
 
 
     $(".carousel-control").click(function(){
-        $("#myCarousel").carousel( {interval: 99999999999} );
+        $("#myCarousel").carousel( {interval: 0} );
         console.log("carousel-control clicked from lightBoxSript");
 
     });
 
     //Save, hide, and close Save Panel and move to save.html
     $("#SaveSavePanel").click(function(){
-            $("#saveSuccess")
+
+
+        $("#saveSuccess")
                 .show(500)
                 .delay(1500)
                 .hide(500, function(){
@@ -47,14 +124,19 @@ $(document).ready(function(){
                         $("#toSavePanel").hide(500);
                     } , 0  );})
                 .show( function(){ setTimeout(function(){ location.href = 'save.html'});
-            })});
+        });
+
+
+    });
 
 
     // Activate Carousel
     $("#myCarousel").carousel({
         interval: 0
-
     });
+
+
+
 });
 
 

@@ -1,18 +1,3 @@
-var i=0;
-var ar=['playing video game','animal-care','handy-man','dancer', 'babysitter'];
-
-$("document").ready(function(){
-
-	for(; i<5; i++){
-	 $(".leftSide_list").append('<lable><a href="#"><section id="little_pic"></section> <p id="little_text"> '+ar[i] +' </p></a></lable>');
-	}
-});
-
-
-
-
-
-
 $( "document" ).ready(function() {
 
     $("#hamburger").click(function(){
@@ -56,15 +41,28 @@ $( "document" ).ready(function() {
         });
     });
 
+    $.getJSON("data/list.json" , function(data){
+        $.each(data.products , function() {
+            $('.leftSide_list').append(
+                "<lable><a href='order.html?robotId="+this.id+"'><section id='little_pic'></section><p id='little_text'>"+ this.name +"</p></a></lable>");
+        });
+    });
+//
+//$(document).ready(function(){
+//    $.getJSON("data/books.json" , function(data){
+//        $('h1').html(data.category);
+//        $('#books-list').append("<ul>");
+//        $.each(data.products , function() {
+//            $('#books-list').append("<li><a href='book.html?bookId=" + this.id + "'>" + this.name + "</a></li>");
+//        });
+//        $('#books-list').append("</ul>");
+//    });
+//});
 
 
-//$("document").ready(
-//  $( "document" ).ready(function() {
-//    var x = document.createElement("h2");
-//    x.innerHTML = "hi";
-//    document.getElementsByTagName("main")[0].appendChild(x);
-// $(function(){
-//    alert('hello');
+
+
+
     $.ajax({
         type : "POST",
         url : "includes/action.php",
