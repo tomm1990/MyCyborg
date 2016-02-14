@@ -41,7 +41,7 @@ $( "document" ).ready(function() {
         });
     });
 
-    //Parse the JSON file
+    //Parse the JSON file and puts elemnts inside .leftSide_list
     $.getJSON("data/list.json" , function(data){
         $.each(data.products , function() {
             $('.leftSide_list').append(

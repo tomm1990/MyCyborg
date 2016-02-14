@@ -27,7 +27,7 @@ $(document).ready(function(){
         $("#readyrob").css('background',robotPic);
     });
 
-    openPopup();
+    //openPopup();
 });
 
 //Open the first item
