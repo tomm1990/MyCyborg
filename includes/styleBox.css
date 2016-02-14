@@ -7,7 +7,7 @@ header, footer, main, nav, aside, section, article{
     display : block;
 }
 
-body{
+#lightBox body{
     position : relative;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     //font-size: 14px;
@@ -15,11 +15,11 @@ body{
     //color: #333;
     /* background-color: #fff; */
 }
-a{
+#lightBox a{
     text-decoration: none ;
 }
 
-#wrapper2{
+#lightBox #wrapper2{
     position: relative;
     margin: auto;
     height : 420px;
@@ -28,89 +28,67 @@ a{
     border-radius: 15px;
 }
 
-.lightBox{
+#lightBox .lightBox{
     height : 100%;
     background: #ffffff;
     //border : 1px solid #000000;
     border-radius : 15px;
 }
 
-.item.active{
+#lightBox .item.active{
     border-radius: 15px;
 }
 
 
-.featherlight {
+#lightBox .featherlight{
 		display: none;
-		/* dimensions: spanning the background from edge to edge */
 		position:fixed;
 		top: 0; right: 0; bottom: 0; left: 0;
-		/* position: centering content */
 		text-align: center;
-		/* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
 		white-space: nowrap;
-		/* styling */
 		cursor: pointer;
 		//background: #2c2c2c;
-		/* IE8 "hack" for nested featherlights */
 		background: #000000;
 }
 
-	/* support for nested featherlights. Does not work in IE8 (use JS to fix) */
-.featherlight:last-of-type {
+#lightBox .featherlight:last-of-type {
 		background: #000000;
 }
 
-.featherlight:before {
-		/* position: trick to center content vertically */
+#lightBox .featherlight:before {
 		content: '';
 		display: inline-block;
 		height: 100%;
-
 		vertical-align: middle;
 		margin-right: -0.25em;
         background: rgba(0, 0, 0, 0.80);
 }
 
-.featherlight .featherlight-content {
-		/* make content container for positioned elements (close button) */
+#lightBox .featherlight .featherlight-content {
 		position: relative;
         border-radius: 15px;
-		/* position: centering vertical and horizontal */
 		text-align: left;
 		vertical-align: middle;
 		display: inline-block;
-
-		/* dimensions: cut off images */
 		overflow: auto;
-
-		/* styling */
         //background: #be5d5d;
 		cursor: auto;
-
-		/* reset white-space wrapping */
 		//white-space: normal;
         padding : 0px;
         border-bottom: 0px solid transparent;
-	}
+}
 
-/* contains the content */
-.featherlight .featherlight-inner {
-		/* make sure its visible */
+#lightBox .featherlight .featherlight-inner {
 		display: block;
 }
 
-.featherlight .featherlight-close-icon {
-		/* position: centering vertical and horizontal */
+#lightBox .featherlight .featherlight-close-icon {
 		position: absolute;
 		top: 0;
 		right: 0;
         display : none;
-		/* dimensions: 25px x 25px */
 		line-height: 25px;
 		width: 25px;
-
-		/* styling */
 		cursor: pointer;
 		text-align: center;
 		font-family: Arial, sans-serif;
@@ -118,8 +96,7 @@ a{
 		color: #000;
 }
 
-
-.content{
+#lightBox .content{
     padding : 5vh;
     //padding-bottom: 30px;
     height:400px;
@@ -128,17 +105,17 @@ a{
     width : 50%;
 }
 
-.chooseArea{
+#lightBox .chooseArea{
     float : left;
     height : 80%;
     width : 100%;
 }
 
-.chooseArea h2,h3{
+#lightBox .chooseArea h2,h3{
     display : inline;
 }
 
-.checkoutArea{
+#lightBox .checkoutArea{
     position: absolute;
     top : 15%;
     right : 10% ;
@@ -147,28 +124,27 @@ a{
     text-align: center;
 }
 
-.checkoutArea button{
+#lightBox .checkoutArea button{
     border-radius: 0%;
     width : 100%;
     text-align: left;
     font-size : 82%;
 }
 
-.checkoutArea .glyphicon-shopping-cart{
+#lightBox .checkoutArea .glyphicon-shopping-cart{
     color : #ff9212;
 }
 
-.checkoutArea .glyphicon-star{
+#lightBox .checkoutArea .glyphicon-star{
     color : #ffe838;
-
 }
 
-.imgArea img{
+#lightBox .imgArea img{
     float : left ;
     margin : -10px;
 }
 
-#customeImage{
+#lightBox #customeImage{
     width : 250px;
     height : 265px;
     border : 1px solid #999999;
@@ -178,25 +154,25 @@ a{
     //margin : -10px;
 }
 
-.chooseArea input{
+#lightBox .chooseArea input{
     margin : 1.5vh;
 }
 
-.chooseArea label{
+#lightBox .chooseArea label{
     display: inline;
     margin-left : 1vw;
 }
 
-.clear{
+#lightBox .clear{
     clear: both;
 }
 
 /*slides css*/
-.list-group-item{
+#lightBox .list-group-item{
     margin-bottom: 3px;
 }
 
-.carousel-control{
+#lightBox .carousel-control{
     height : 100%;
     width : 5%;
     background : rgb(255, 255, 255);
@@ -205,16 +181,16 @@ a{
 
 }
 
-.carousel-control.left{
+#lightBox .carousel-control.left{
     background : rgb(255, 255, 255);
 }
 
-.carousel-control.right{
+#lightBox .carousel-control.right{
     background : rgb(255, 255, 255);
 }
 
 
-.btn-primary{
+#lightBox .btn-primary{
     width : 30vw;
     float : left;
     display:block;
@@ -222,17 +198,17 @@ a{
     border-radius : 0px;
 }
 
-#lastPanel{
+#lightBox #lastPanel{
     height : 50px;
 }
-.purchaseButtons{
+#lightBox .purchaseButtons{
     display : inline;
     float : right;
     margin-top: -9px;
     margin-right: -10px;
 }
 
-.progBar ol{
+#lightBox .progBar ol{
     width : 100%;
     position: absolute;
     //margin: auto;
@@ -240,7 +216,7 @@ a{
     left:30%;
 }
 
-.carousel-indicators-numbers li{
+#lightBox .carousel-indicators-numbers li{
     background: url(../images/bracket2.gif);
     height : 30px;
     text-indent:-2%;
@@ -257,21 +233,7 @@ a{
     position: relative;
 }
 
-/*
-.carousel-indicators-numbers li:before {
-   content:"";
-   position: absolute;
-   left: 100%;
-   top: 0px;
-   width: 0;
-   height: 0;
-   border-top: 15px solid transparent;
-   border-left: 24px solid #999;
-   border-bottom: 15.5px solid transparent;
-}
-*/
-
-.carousel-indicators-numbers li:hover{
+#lightBox .carousel-indicators-numbers li:hover{
     background: url(../images/bracket2.gif) no-repeat right;
     //margin: 0 0.7vw;
     width: 80px;
@@ -280,13 +242,13 @@ a{
     //border-left: 24px solid #337ab7;
 }
 
-#rightBracket{
+#lightBox #rightBracket{
      background: url(../images/bracket2.gif) no-repeat right;
 }
 
 
 
-.carousel-indicators-numbers li.active{
+#lightBox .carousel-indicators-numbers li.active{
     background: url(../images/bracket2.gif) no-repeat right;
     //margin: 0 0.7vw;
     width: 80px;
@@ -296,7 +258,7 @@ a{
     font-weight: 900;
 }
 
-#toSavePanel{
+#lightBox #toSavePanel{
     position: absolute;
     margin-left: 40%;
     background: #ffffff;
@@ -310,24 +272,24 @@ a{
     padding : 20px 20px 20px 20px;
 }
 
-#toSavePanel h1 ,h2, h3{
+#lightBox #toSavePanel h1 ,h2, h3{
     width : 100%;
 	color:#990000;
 	font-family: "Patrick hand";
 }
 
-#toSavePanel h1{
+#lightBox #toSavePanel h1{
     font-size: 22px;
     text-align: center;
 }
 
-#toSavePanel h2{
+#lightBox #toSavePanel h2{
     margin-bottom: -10px;
     font-size: 15px;
     padding-left : 25%;
 }
 
-#toSavePanel h3{
+#lightBox #toSavePanel h3{
     font-family: tahoma , arial , sans-serif;
     display: block;
     margin-top: 8px;
@@ -336,7 +298,7 @@ a{
     color : #000000;
 }
 
-#toSavePanel .terms{
+#lightBox #toSavePanel .terms{
     margin-top : 20px;
     display: block;
     height : 20px;
@@ -346,11 +308,11 @@ a{
     text-decoration: underline;
 }
 
-#toSavePanel input[type=checkbox]{
+#lightBox #toSavePanel input[type=checkbox]{
     margin-right: 5px;
 }
 
-#checkOutPanel{
+#lightBox #checkOutPanel{
     position: absolute;
     margin-left: 40%;
     background: #ffffff;
@@ -364,24 +326,24 @@ a{
     padding : 20px 20px 20px 20px;
 }
 
-#checkOutPanel h1 ,h2, h3{
+#lightBox #checkOutPanel h1 ,h2, h3{
     width : 100%;
 	color:#990000;
 	font-family: "Patrick hand";
 }
 
-#checkOutPanel h1{
+#lightBox #checkOutPanel h1{
     font-size: 22px;
     text-align: center;
 }
 
-#checkOutPanel h2{
+#lightBox #checkOutPanel h2{
     margin-bottom: -10px;
     font-size: 15px;
     padding-left : 15%;
 }
 
-#checkOutPanel h3{
+#lightBox #checkOutPanel h3{
     font-family: tahoma , arial , sans-serif;
     display: block;
     margin-top: 18px;
@@ -390,7 +352,7 @@ a{
     color : #000000;
 }
 
-.exitButton{
+#lightBox .exitButton{
     position: absolute;
     left : 3px;
     top:3px;
@@ -400,7 +362,7 @@ a{
     cursor:pointer;
 }
 
-.exitButton2{
+#lightBox .exitButton2{
     position: absolute;
     left :-43px;
     top:13px;
@@ -411,17 +373,17 @@ a{
     cursor:pointer;
 }
 
-.alert-success{
+#lightBox .alert-success{
     display: none;
     margin-top: 5px;
 }
 
-#i{
+#lightBox #i{
     background: url(../images/i.png) no-repeat;
     float : right;
 }
 
-#rectangle{
+#lightBox #rectangle{
     background: url(../images/rectangleHead.png) no-repeat;
     position : absolute;
     right : 0;
@@ -430,7 +392,7 @@ a{
     height : 40px;
 }
 
-#circle{
+#lightBox #circle{
     background: url(../images/roundHead.png) no-repeat;
     position : absolute;
     right : 0;
@@ -439,7 +401,7 @@ a{
     height : 40px;
 }
 
-#triangle{
+#lightBox #triangle{
     background: url(../images/triangleHead.png) no-repeat;
     position : absolute;
     right : 0;
@@ -448,7 +410,7 @@ a{
     height : 40px;
 }
 
-#nightVision{
+#lightBox #nightVision{
     height : 30px;
     line-height: 1px;
     margin-top: 1px;
@@ -457,15 +419,15 @@ a{
     background: #ffffff;
 }
 
-#nightVision input{
+#lightBox #nightVision input{
     margin-top:-6px;
 }
 
-.checkbox-inline input{
+#lightBox .checkbox-inline input{
     margin-top: 5px;
 }
 
-.newButton{
+#lightBox .newButton{
     margin-top: 2vh;
     background: #821122;
     height : 30px;
@@ -477,7 +439,7 @@ a{
 
 }
 
-#toSavePanel .newButton{
+#lightBox #toSavePanel .newButton{
     background: #f7f6f6;
     height : 30px;
     width : 80%;
@@ -490,7 +452,7 @@ a{
     margin-bottom: 20px;
 }
 
-#checkOutPanel .newButton{
+#lightBox #checkOutPanel .newButton{
     background: #f7f6f6;
     height : 30px;
     width : 80%;
@@ -504,7 +466,7 @@ a{
 }
 
 
-.btn-primary{
+#lightBox .btn-primary{
     position: relative;
     height : 40px;
     width : 90%;
@@ -516,31 +478,31 @@ a{
     color : #5a5a5a;
 }
 
-.btn-primary:hover{
+#lightBox .btn-primary:hover{
     background: #821122;
 }
 
-.btn-primary.active{
+#lightBox .btn-primary.active{
     background: #821122;
 }
 
-.btn-primary.active:hover{
+#lightBox .btn-primary.active:hover{
     background: #821122;
 }
 
-.glyphicon-info-sign{
+#lightBox .glyphicon-info-sign{
     float : right;
     margin-top: 4px;
 }
 
-input[type=checkbox] {
+#lightBox input[type=checkbox] {
     -webkit-appearance:button;
     margin-top: 3px;
     width:15px;
     height:15px;
 }
 
-input[type=checkbox]:checked {
+#lightBox input[type=checkbox]:checked {
     background: #821122;
     border-radius: 5px;
 }

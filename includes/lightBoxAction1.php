@@ -35,16 +35,17 @@
 
     include('db.php');
 
+    $variable = $_GET['variable'];
+
     $query = "INSERT INTO  `auxstudDB5`.`robotsTable_221` (`r.id` ,`r.name` ,`r.num` ,`r.price` ,`r.pic` ,`r.sales` ,`r.rate` ,`r.des`)
-    VALUES ('$id',  'Custom Robot', '$robot_num' , '4352'  ,  'gray.png',  '0',  '0',  'Your new custom robot...');";
+    VALUES ('$id',  'Custom Robot', '$robot_num' , '$variable'  ,  'gray.png',  '0',  '0',  'Your new custom robot...');";
 
     $result2 = mysqli_query($connection , $query);
     if(!$result2){
         die("DB query failed from action.php the second");
     }
-    else{
-        echo "<h2>Seccuess!</h2>";
-    }
+
+
 
         //use return daya
 //        while( $row = mysqli_fetch_assoc($result) ){
@@ -62,7 +63,8 @@
 //            var_dump($row);
 //            echo "</section>";
 //}
+        header('Location: ../order.html');
 
-        if ($result2) mysqli_free_result($result2);
+        //if ($result2) mysqli_free_result($result2);
 		if ($connection) mysqli_close($connection);
 ?>

@@ -5,21 +5,18 @@ $(document).ready(function(){
     var chbxs = $('#legsPropertiesPanel :checkbox[required]');
     //couting checkboxes within #handsPropertiesPanel
     var chbxs2 = $('#handsPropertiesPanel :checkbox[required]');
-//    console.log("length of chbxs is "+chbxs.length);
-//    console.log("length of chbxs2 is "+chbxs2.length);
+
     var namedChbxs = {};
 
     //each checkbox will receieve the mutual name
     chbxs.each(function(){
         var name = $(this).attr('name');
-//        console.log("Name is : "+this.name);
         namedChbxs[name] = (namedChbxs[name] || $()).add(this);
     });
 
     //each checkbox will receieve the mutual name
     chbxs2.each(function(){
         var name = $(this).attr('name');
-//        console.log("Name is : "+this.name);
         namedChbxs[name] = (namedChbxs[name] || $()).add(this);
     });
 
@@ -58,8 +55,7 @@ $(document).ready(function(){
 
     //show Save Panel
     $("#showSavePanel").click(function(event){
-        //var temp = Math.floor(Math.random() * 400) + 320;
-        $("#orderNum").html(Math.floor(Math.random()*8876423)+11324532);
+      $("#orderNum").html(Math.floor(Math.random()*8876423)+11324532);
         $("#rnum").html(Math.floor(Math.random()*400)+320);
 
         // if hands or legs were chosen
@@ -76,7 +72,8 @@ $(document).ready(function(){
             console.log("current number is :"+$(this).attr("list"));
         });
         console.log("Total is  : "+total);
-        //$("#orderNum").html("Math.floor(Math.random()*8876423)+11324532");
+        $.get('lightBoxAction1.php', {variable : total} );
+ //$("#orderNum").html("Math.floor(Math.random()*8876423)+11324532");
         $("#rprice").html(total);
         //$("p").html("Hello <b>world!</b>");
         //$("#r.num1").html("Math.floor(Math.random()*400)+320");
