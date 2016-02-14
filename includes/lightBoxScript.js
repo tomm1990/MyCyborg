@@ -24,10 +24,7 @@ $(document).ready(function(){
     //then remove "required" from other checkboxes
     chbxs.change(function(){
         var name = $(this).attr('name');
-//        console.log("Name is : "+this.name);
         var cbx = namedChbxs[name];
-//        console.log("Length of cbx is "+cbx.length);
-//        console.log("cbx.filter(':checked').length is "+cbx.filter(':checked').length);
         if(cbx.filter(':checked').length > 0){
             cbx.removeAttr('required');
             flag1=1;
@@ -40,10 +37,7 @@ $(document).ready(function(){
     //then remove "required" from other checkboxes
     chbxs2.change(function(){
         var name = $(this).attr('name');
-//        console.log("Name is : "+this.name);
         var cbx = namedChbxs[name];
-//        console.log("Length of cbx is "+cbx.length);
-//        console.log("cbx.filter(':checked').length is "+cbx.filter(':checked').length);
         if(cbx.filter(':checked').length > 0){
             cbx.removeAttr('required');
             flag2=1;
@@ -52,31 +46,30 @@ $(document).ready(function(){
         }
     });
 
-
     //show Save Panel
     $("#showSavePanel").click(function(event){
-      $("#orderNum").html(Math.floor(Math.random()*8876423)+11324532);
+        //setting the order number randomly
+        $("#orderNum").html(Math.floor(Math.random()*8876423)+11324532);
+        //setting the number randomly
         $("#rnum").html(Math.floor(Math.random()*400)+320);
-
         // if hands or legs were chosen
         if(flag1==1&&flag2==1){
             event.preventDefault();
             $("#toSavePanel").show(500);
         }
         else if (flag2==0){
+            //if hands were not chosen, move one screen left
             $('#foo').click();
         }
+        //Calculating the price
         var Price = $('input:checkbox:checked');
         $.each( $(Price) , function(){
             total += parseFloat($(this).attr("list"));
-            console.log("current number is :"+$(this).attr("list"));
+            //console.log("current number is :"+$(this).attr("list"));
         });
         console.log("Total is  : "+total);
-        $.get('lightBoxAction1.php', {variable : total} );
- //$("#orderNum").html("Math.floor(Math.random()*8876423)+11324532");
+        $.post('lightBoxAction1.php', {variable : total} );
         $("#rprice").html(total);
-        //$("p").html("Hello <b>world!</b>");
-        //$("#r.num1").html("Math.floor(Math.random()*400)+320");
     });
 
     //Hide Save Panel
@@ -101,8 +94,6 @@ $(document).ready(function(){
         //$(this).changePage("order.html",{transition:"slide"});
     });
 
-
-
     $(".carousel-control").click(function(){
         $("#myCarousel").carousel( {interval: 0} );
         console.log("carousel-control clicked from lightBoxSript");
@@ -111,8 +102,6 @@ $(document).ready(function(){
 
     //Save, hide, and close Save Panel and move to save.html
     $("#SaveSavePanel").click(function(){
-
-
         $("#saveSuccess")
                 .show(500)
                 .delay(1500)
@@ -122,18 +111,12 @@ $(document).ready(function(){
                     } , 0  );})
                 .show( function(){ setTimeout(function(){ location.href = 'save.html'});
         });
-
-
     });
-
 
     // Activate Carousel
     $("#myCarousel").carousel({
         interval: 0
     });
-
-
-
 });
 
 

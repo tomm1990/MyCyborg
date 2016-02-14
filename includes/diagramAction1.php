@@ -19,14 +19,3 @@
     mysqli_free_result($result);
     mysqli_close($connection);
 ?>
-
-
-<!--
-        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
-            <td>1</td>
-            <td>Baby Sitter</td>
-            <td>234</td>
-            <td>8.5%</td>
-            <td>5/5</td>
-            <td class="text-success">$150.00</td>
-        </tr>-->

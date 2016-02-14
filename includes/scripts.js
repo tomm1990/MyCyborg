@@ -47,18 +47,6 @@ $( "document" ).ready(function() {
                 "<lable><a href='order.html?robotId="+this.id+"'><section id='little_pic'></section><p id='little_text'>"+ this.name +"</p></a></lable>");
         });
     });
-//
-//$(document).ready(function(){
-//    $.getJSON("data/books.json" , function(data){
-//        $('h1').html(data.category);
-//        $('#books-list').append("<ul>");
-//        $.each(data.products , function() {
-//            $('#books-list').append("<li><a href='book.html?bookId=" + this.id + "'>" + this.name + "</a></li>");
-//        });
-//        $('#books-list').append("</ul>");
-//    });
-//});
-
 
 
     $.ajax({
@@ -67,6 +55,9 @@ $( "document" ).ready(function() {
         cache : true,
         success:function(html){
             $("#loader").html(html);
+            $(".secw").click(function(){
+                window.location.replace($(this).data('url'));
+            });
         }
     });
 
