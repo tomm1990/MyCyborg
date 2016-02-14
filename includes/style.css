@@ -233,7 +233,7 @@ figcaption{
 figure img{
     width: 12vw;
     height : 16vw;
-    display: inline-block;
+    display: inline;
     padding : 10px;
 }
 
@@ -402,7 +402,7 @@ footer a{
 
 
 #d2{
-	display:inline-block;
+	display:inline;
 	height:33px;
 	width: 270px;
 	color:#990000;
@@ -690,7 +690,7 @@ main h1{
 }
 
 .timesArea .secwrap{
-    display: inline-block;
+    display: inline;
 	width:192px;
 	height:192px;
 	border: 6px solid #821122;
@@ -863,7 +863,7 @@ input[type=checkbox]:checked {
      color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 16px;
     border-radius: 8px;
 
@@ -1025,7 +1025,7 @@ lable{
     }
 
     .smallMobileMenu a{
-        display: inline-block;
+        display: inline;
         height : 39px;
         width : 40px;
     }
