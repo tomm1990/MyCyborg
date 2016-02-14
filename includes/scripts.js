@@ -41,6 +41,7 @@ $( "document" ).ready(function() {
         });
     });
 
+    //Parse the JSON file
     $.getJSON("data/list.json" , function(data){
         $.each(data.products , function() {
             $('.leftSide_list').append(
@@ -49,6 +50,7 @@ $( "document" ).ready(function() {
     });
 
 
+    //Placing the elements in index.html
     $.ajax({
         type : "POST",
         url : "includes/action.php",
@@ -61,6 +63,7 @@ $( "document" ).ready(function() {
         }
     });
 
+    //Placing the elements in diagram.html
     $.ajax({
         type : "POST",
         url : "includes/diagramAction1.php",
@@ -70,6 +73,7 @@ $( "document" ).ready(function() {
         }
     });
 
+    //Placing the elements in lifeStyle.html
     $.ajax({
         type : "POST",
         url : "includes/lifeStyleAction1.php",
@@ -79,6 +83,7 @@ $( "document" ).ready(function() {
         }
     });
 
+    //Placing the elements in others.html
     $.ajax({
         type : "POST",
         url : "includes/othersAction1.php",
@@ -87,5 +92,4 @@ $( "document" ).ready(function() {
             $("#otherDiv").html(html);
         }
     });
-
 });
