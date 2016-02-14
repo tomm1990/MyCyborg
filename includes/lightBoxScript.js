@@ -90,7 +90,7 @@ $(document).ready(function(){
 
     // CUNTINUE button was clicked -> to order.html
     $("#continueButton").click(function(){
-        location.href = 'order.html?robotId=301';
+        location.href = 'index.html';
         //$(this).changePage("order.html",{transition:"slide"});
     });
 

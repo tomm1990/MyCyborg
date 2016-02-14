@@ -19,13 +19,13 @@ $( "document" ).ready(function() {
         $(".timesArea").toggle(200);
     });
 
-    // report.html -> hover over secwrap changes h2 color
-    $( "#mainReports .secwrap" ).hover(function() {
+    // report.html -> hover over secw2 changes h2 color
+    $( "#mainReports .secw2" ).hover(function() {
         $(this).find("h2").css("color","#f7f6f6");
     });
 
     // report.html-> mouse leave makes h2 original color
-    $( "#mainReports .secwrap" ).mouseleave(function() {
+    $( "#mainReports .secw2" ).mouseleave(function() {
         $(this).find("h2").css("color","#821122");
     });
 
@@ -41,7 +41,7 @@ $( "document" ).ready(function() {
         });
     });
 
-    //Parse the JSON file and puts elemnts inside .leftSide_list
+    //Parse the JSONF file and puts elemnts inside .leftSide_list
     $.getJSON("data/list.json" , function(data){
         $.each(data.products , function() {
             $('.leftSide_list').append(

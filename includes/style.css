@@ -225,6 +225,7 @@ figcaption{
     padding: 10px;
     background: #f7f6f6;
     border : 3px solid #000000;
+    border : 3px solid #000000;
     width : 100%;
     font-family: "Patrick hand", arial, tahoma;
     text-align: center;
@@ -374,7 +375,10 @@ footer a{
     font-family: "Patrick hand", arial, sans-serif;
 }
 
-
+.secw2 h2{
+    color: #990000;
+    font-family: "Patrick hand", arial, sans-serif;
+}
 
 .secw{
     position : relative;
@@ -386,7 +390,22 @@ footer a{
 	//margin-right: 7vw;
 	//margin-left:6.7vw;
 	float:left;
-	margin-right: 5%;
+	margin-right: 4%;
+	margin-left:8%;
+    cursor: pointer;
+}
+
+.secw2{
+    position : relative;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	margin-top:60px;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+	float:left;
+	margin-right: 4%;
 	margin-left:8%;
     cursor: pointer;
 }
@@ -595,7 +614,21 @@ main h1{
     margin: auto;
 }
 
-.bubblesArea .secwrap{
+.bubblesArea .secw{
+    position : absolute;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+    background: #ffffff;
+    margin-left:4%;
+    cursor: pointer;
+
+
+}
+.bubblesArea .secw2{
     position : absolute;
 	width:192px;
 	height:192px;
@@ -610,16 +643,27 @@ main h1{
 
 }
 
-.bubblesArea .secwrap:hover{
+.bubblesArea .secw:hover{
     background: #821122;
     transition: 0.2s ease-in;
 
 }
 
-.bubblesArea .secwrap h2:hover{
+.bubblesArea .secw2:hover{
+    background: #821122;
+    transition: 0.2s ease-in;
 
 }
-.bubblesArea .secwrap h2{
+
+
+.bubblesArea .secw h2{
+    color: #990000;
+	font-family: "Patrick hand" , arial , tahoma;
+    text-align: center;
+    margin-top: 35%;
+}
+
+.bubblesArea .secw2 h2{
     color: #990000;
 	font-family: "Patrick hand" , arial , tahoma;
     text-align: center;
@@ -688,10 +732,24 @@ main h1{
     width : 80%;
     height : 300px;
     text-align: center;
+    padding-left : 10%;
 }
 
 .timesArea .secwrap{
-    display: inline;
+    display: inline-block;
+	width:192px;
+	height:192px;
+	border: 6px solid #821122;
+	border-radius:50%;
+	//margin-right: 7vw;
+	//margin-left:6.7vw;
+    background: #ffffff;
+    margin:3vw;
+    cursor: pointer;
+}
+
+.timesArea .secw2{
+    display: inline-block;
 	width:192px;
 	height:192px;
 	border: 6px solid #821122;
@@ -708,12 +766,27 @@ main h1{
     transition: 0.2s ease-in;
     color : #f7f6f6;
 }
+.timesArea .secw2:hover{
+    background: #821122;
+    transition: 0.2s ease-in;
+    color : #f7f6f6;
+}
 
 .timesArea .secwrap h2:hover{
     color : #f7f6f6;
 
 }
+.timesArea .secw2 h2:hover{
+    color : #f7f6f6;
+
+}
 .timesArea .secwrap h2{
+    color: #990000;
+	font-family: "Patrick hand" , arial , tahoma;
+    text-align: center;
+    margin-top: 35%;
+}
+.timesArea .secw2 h2{
     color: #990000;
 	font-family: "Patrick hand" , arial , tahoma;
     text-align: center;
@@ -1026,7 +1099,7 @@ lable{
     }
 
     .smallMobileMenu a{
-        display: inline;
+        display: inline-block;
         height : 39px;
         width : 40px;
     }
@@ -1178,7 +1251,6 @@ lable{
         display : inline;
         margin-right: 2.6vw;
         padding-right: 0px;
-
         color : #f7f6f6;
 	}
 
@@ -1190,5 +1262,7 @@ lable{
         display: none;
     }
 
-
+    #plus{
+        display: none;
+    }
 }
