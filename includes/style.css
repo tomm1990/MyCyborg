@@ -121,6 +121,18 @@ form{
     font-family: "Patrick hand" , tahoma , arial;
 }
 
+.menuBar a:last-child{
+    float:right;
+}
+
+.menuBar a:last-child:hover{
+    float:right;
+    transition: 0s ease-in;
+    border-bottom: 0px solid #f7f6f6;
+    color : #f7f6f6;
+    text-decoration: none;
+}
+
 
 
 nav{
