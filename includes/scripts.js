@@ -67,7 +67,6 @@ $( "document" ).ready(function() {
         cache : true,
         success:function(html){
             $("#loader").html(html);
-
         }
     });
 
@@ -80,6 +79,22 @@ $( "document" ).ready(function() {
         }
     });
 
+    $.ajax({
+        type : "POST",
+        url : "includes/lifeStyleAction1.php",
+        cache : true,
+        success:function(html){
+            $("#lifeStyleDiv").html(html);
+        }
+    });
 
+    $.ajax({
+        type : "POST",
+        url : "includes/othersAction1.php",
+        cache : true,
+        success:function(html){
+            $("#otherDiv").html(html);
+        }
+    });
 
 });

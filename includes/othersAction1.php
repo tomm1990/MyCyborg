@@ -1,14 +1,10 @@
 <?php
     include('db.php');
 
-        //get data from DB with query
-        //get data from DB
-        //$query = "SELECT * FROM robotsTable_221";
 
-        $query = "Select * from robotsTable_221 ORDER BY `r.id` ASC LIMIT 0 , 6 ";
+    $query = "Select * from robotsTable_221 ORDER BY `r.id` ASC LIMIT 12,10 ";
 
-//$query = "INSERT INTO  `auxstudDB5`.`robotsTable_221` (`r.id` ,`r.name` ,`r.num` ,`r.price` ,`r.pic` ,`r.sales` ,`r.rate` ,`r.des`)
-//                                               VALUES ('313',  'Custom Robot', NULL,   '1999',  'gray.png',  '0',  '0',  'Your new custom robot...');";
+
         $result = mysqli_query($connection , $query);
     if( !$result ){
         die("DB query failed from action.php");
