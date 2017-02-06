@@ -6,22 +6,21 @@
         die("DB query failed from action.php the first");
     }
     $robot_price = $_POST['variable'];
-    //$robot_num = $_GET['rnum'];
     while( $row = mysqli_fetch_assoc($result) ){
-        $id =  $row["r.id"];
+        $id =  $row["r.num"];
     }
     $id = $id+1;
-    if ($result) mysqli_free_result($result);
-    include('db.php');
-    //$variable = $_GET['variable'];
-    //query to insert a new custome robot
-    $query = "INSERT INTO  `auxstudDB5`.`robotsTable_221` (`r.id` ,`r.name` ,`r.num` ,`r.price` ,`r.pic` ,`r.sales` ,`r.rate` ,`r.des`)
-    VALUES ('$id',  'Custom Robot', NULL , '$robot_price'  ,  'gray.png',  '0',  '0',  'Your new custom robot...');";
+    mysqli_free_result($result);
 
-    $result2 = mysqli_query($connection , $query);
-    if(!$result2){
+    //query to insert a new custome robot
+    $query = "INSERT INTO `robotsTable_221` (`r.id` ,`r.name` ,`r.num` ,`r.price` ,`r.pic` ,`r.des` ,`r.sales` ,`r.rate`)
+    VALUES (NULL,  'Custom Robot', '$id' , '$robot_price'  ,  'gray.png',  'Your new custom robot...',  '1',  '1');";
+
+    $result = mysqli_query($connection , $query);
+    if(!$result){
         die("DB query failed from action.php the second");
     }
+    mysqli_free_result($result);
+    mysqli_close($connection);
     header('Location: ../order.html');
-    if ($connection) mysqli_close($connection);
 ?>
