@@ -20,7 +20,7 @@ body{
 }
 
 #wrapper{
-    width : 100%;
+    width : 95%;
     height : 100%;
     margin : 0px auto;
 }
@@ -431,6 +431,7 @@ footer a{
 }
 
 #d3{
+    margin-top: 4%;
 	color:#990000;
 	text-align: center;
 	font-family: "Patrick hand" , arial , tahoma;
@@ -478,8 +479,8 @@ footer a{
 }
 
 #img6{
-	background: url('../images/robot14.png') no-repeat ;
-	width:270px;
+	background: url('../images/robot14.png') 50px 50px no-repeat ;
+    width:270px;
 	height: 250px;
 	border : 1px solid #c7c7c7;
 }
@@ -1004,9 +1005,9 @@ input[type=checkbox]:checked {
 #little_pic{
 	width:53px;
 	height:77px;
-	background : url('../images/little_shadow.png') no-repeat ;
-	float:left;
-
+    background : url('../images/little_shadow.png') no-repeat ;
+    background-size: 100%;
+    float:left;
 }
 
 #little_text{

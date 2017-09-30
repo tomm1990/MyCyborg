@@ -42,24 +42,41 @@ $( "document" ).ready(function() {
     });
 
     //Parse the JSONF file and puts elemnts inside .leftSide_list
-    $.getJSON("data/list.json" , function(data){
-        $.each(data.products , function() {
-            $('.leftSide_list').append(
-                "<lable><a href='order.html?robotId="+this.id+"'><section id='little_pic'></section><p id='little_text'>"+ this.name +"</p></a></lable>");
-        });
-    });
-
+    // $.getJSON("data/list.json" , function(data){
+    //     $.each(data.products , function() {
+    //         //console.log(data.products);
+    //         $('.leftSide_list').append(
+    //             "<lable><a href='order.html?robotId="+this.id+"'><section id='little_pic'></section><p id='little_text'>"+ this.name +"</p></a></lable>");
+    //     });
+    // });
 
     //Placing the elements in index.html
     $.ajax({
         type : "POST",
         url : "includes/action.php",
         cache : true,
-        success:function(html){
-            $("#loader").html(html);
-            $(".secw").click(function(){
-                window.location.replace($(this).data('url'));
-            });
+        success:function(data,success){
+            var json = JSON.parse(data), i=0;
+            console.log(json);
+            while(i<json.length){
+                var pic = json[i]["r.pic"],
+                    id = json[i]["r.id"],
+                    name = json[i]["r.name"];
+                if(i<6){
+                    $("#loader").append("<section class='secw' style='background:url(images/"+pic+")  no-repeat' data-url='order.html?robotId="+id+"'><div id='d1'><h2>"+name+"</h2></div></section>");
+                    $(".secw").click(function(){
+                        window.location.replace($(this).data('url'));
+                    });
+                }
+                $('.leftSide_list').append(
+                    "<lable><a href='order.html?robotId="+id+"'><section id='little_pic' style='background:url(images/"+pic+") 40% 20% no-repeat;background-size:60px 60px'></section><p id='little_text'>"+ name +"</p></a></lable>");
+
+                i++;
+            }
+           // $("#loader").html(html);
+           // $(".secw").click(function(){
+           //     window.location.replace($(this).data('url'));
+           // });
         }
     });
 

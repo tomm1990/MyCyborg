@@ -1,9 +1,9 @@
 <?php
     include('db.php');
-    $query = "Select * from robotsTable_221 ORDER BY `r.id` ASC LIMIT 7,5 ";
+    $query = "SELECT * FROM robotsTable_221 ORDER BY `r.id` ASC LIMIT 6 , 5 ";
     $result = mysqli_query($connection , $query);
     if( !$result ){
-        die("DB query failed from action.php");
+        die("DB query failed from action.php : ");
     }
 
     while( $row = mysqli_fetch_assoc($result) ){

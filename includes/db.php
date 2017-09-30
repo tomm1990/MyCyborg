@@ -1,7 +1,7 @@
 <?php
 //To create the connection to the data base
 $dbhost="localhost";
-//$dbhost=160.153.129.217;
+//$dbhost="160.153.129.217";
 $dbuser="auxstudDB51";
 $dbpass="auxstud5DB1!";
 $dbname="auxstudDB5";
